@@ -1,0 +1,375 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+//variables
+$px: 16px;
+$borde: solid darkgreen 3px;
+$ancho: 200px;
+$sombra: 0 4px 8px 0 yellowgreen;
+
+//keyframes
+@keyframes tilin{
+    50%{background-color: yellow;}
+    100%{background-color: orange;}
+}
+@keyframes delivery{
+    34%{background-color: orange;}
+    33%{background-color: yellow;}
+    33%{background-color: orange;}
+}
+body{
+    background-color: black;
+    font-family: "Saira Stencil One", cursive;
+}
+/* header*/
+.cabeza{
+    height: 150px;
+    background-image: radial-gradient(darkgreen, black);
+    border-bottom: solid 3px orangered;
+}
+.cabeza__titulo{
+    text-align: center;
+    color: yellow; 
+    margin: 0%;
+}
+.menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color:orangered;
+    height: ($px*2) - 2px;
+    transform: translateY($px - (($px / 2) - ($px / 8)));
+    .menu__items{
+        display: inline;
+        border-right: 1px solid #bbb;
+        height: 16px;
+    }
+    //mopdificador
+    .menu__items--end{
+        border-right: none;
+        margin-right: none;
+        float: right;
+    }
+    .menu__enlace{
+        color: white;
+        margin-right: 10px;
+        text-align: center;
+        align-items: center;
+        text-decoration: none;
+    }
+    .menu__enlace:hover{
+        color: yellowgreen;
+    }
+}
+/* musica*/
+.musica{
+    max-width: ($ancho*2)+($ancho/2);
+    
+    .musica__audio{
+       width: 90%;
+    }
+    .musica__texto{
+        color: orangered;
+    }
+}
+/*main*/
+.intro{
+   
+    .intro__titulo{
+        color: darkgreen;
+        text-align: center;
+        text-decoration: underline;
+        margin-bottom: 20px;
+    }
+    .intro__texto{
+        color: white;
+    }   
+}
+.novedades{
+    display: flex;
+    .novedades__contenedor{
+        max-width: $ancho+100px;
+        width: 90%;
+        margin: 0 auto;
+        .card{
+            background: whitesmoke;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px 0 yellowgreen;
+            transition: 0,3s;
+            padding: 20px;
+            display: block;
+            align-items: center;
+            position: relative;
+            margin-bottom: 50px;
+            .card__img{
+                width: 100%;
+                padding: 4px;
+            }
+        }
+        .card:hover{
+            box-shadow:(0 8px 16px 0) yellowgreen;
+        }
+        .info{
+            border: solid 2px black;
+            padding: 5px;
+            .info__nombre{
+                color: darkgreen;
+                text-transform: capitalize;
+                text-decoration: underline;
+            }
+        }
+        .boton{
+            border: none;
+            border-radius: 15px;
+            min-width: $ancho - ($ancho/2);
+            height: 20px;
+            padding: 0 5px;
+            background: yellowgreen;
+            color: orangered;
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s ease all;
+            transform: translateX(30%) translateY(-10%);
+            .boton__texto{
+                font-size: 12px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        }
+        .boton:hover{
+            background: chartreuse;
+            text-decoration: none;
+        }
+    }
+}
+.contenido{
+    padding: 30px;
+    margin: $ancho/10;
+    .secciones{
+        background-color:grey;
+        color: darkgreen;
+        .secciones__intro{
+            margin-bottom: 30px;
+            .secciones__titulo{
+                color:darkgreen;
+                text-decoration: underline;
+                text-align: center;
+            }
+            .secciones__texto{
+                color: white;
+            }
+        }
+    }
+    .lista{
+        margin-top: 30px;
+        .lista__seccion{
+            border:$borde;
+            margin-bottom: 20px;
+            .lista__tema{
+                list-style: none;
+                .lista__titulo{
+                    color: orange;
+                    text-align: center;
+                    text-decoration: underline;
+                }
+                .lista__enlace{
+                    text-decoration: none;
+                    color: darkgreen;
+                }
+                .lista__enlace:hover{
+                    color: yellowgreen;
+                }
+                //modificador
+                .lista__enlace--destacado{
+                    color: yellow;
+                }
+                .lista__texto{
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+//aside
+.lateral{
+    border: $borde;
+    width: min-content;
+    margin-left: 40px;
+    .lateral__videos{
+        border:$borde;
+        .lateral__videos--modif{
+            border: $borde;
+            padding: 3px;
+        }
+    }
+   .lateral__anuncios{
+        display: grid;
+        justify-items: center;
+        border: $borde;
+        background-color: yellowgreen;
+        animation-name: tilin;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-duration: 1s;
+        animation-delay: 0;
+   }
+}
+.pie{
+    background-image: linear-gradient(black, darkgreen);
+    height: 70px;
+    margin-top: 30px;
+    .pie__texto{
+        text-align: center;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .pie__enlace{
+        text-decoration: none;
+    }
+}
+/*exclusivo ups.html*/
+
+.ups__titulo{
+  
+    color: orangered;
+    margin-bottom: 50px;
+   transform: translateY(50px);
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.ups__texto{
+    display: block;
+    font-size: 3em;
+    color: yellow;
+    text-transform: capitalize;
+}
+/*exclusivo servicios.html*/
+.bienvenidos{
+    color: white;
+    text-transform: uppercase;
+    margin: 50px;
+    padding: 50px;
+}
+.oferta{    
+    .oferta__titulo{
+        color: darkgreen;
+        text-decoration: underline;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+.product{
+    box-shadow:  0 4px 8px 0 yellowgreen;
+    max-width: $ancho+($ancho/2);
+    margin:40px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: red;
+        .product__nombre{
+        color: darkgreen;
+        text-decoration: underline;
+    }
+    .product__img{
+        padding: 20px;
+        transition: all;
+    }
+    .product__img:hover{
+        transform: scale(1,3);
+    }
+    .product__precio {
+        color: yellow;
+        font-size: 22px;
+        text-decoration: underline;
+    }
+    .product__text{
+        padding: 10px;
+        color: white;
+    }
+    .product__boton{
+        border: none;
+        border-radius: 20px;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: yellowgreen;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+      .product__boton:hover {
+        opacity: 0.7;
+    }
+}
+.product:hover{
+    box-shadow: 0 8px 16px 0 yellowgreen;
+}
+.product--delivery{
+    animation-name: delivery;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 4s;
+    animation-delay: 0;
+}
+/*exclusivo usuarios.html*/
+.fondoUsuario{
+    background-color: gray;
+}
+.sesion{
+    color: darkgreen;
+    margin-right: 20px;
+    .sesion__titulo{
+        padding: $px+($px/2);
+    }
+    fieldset{ border: $borde;
+        display: grid;
+        justify-content: center;
+        padding: $px;
+        background-image: linear-gradient(45deg, orange, green);
+        input{
+            margin-bottom: 20px;
+            width: 80%;
+        }
+        .signUps{
+            background-color: orange;
+            box-shadow: 0 0 8px 0 yellowgreen;
+        }
+        a{
+            text-align: end;
+            text-decoration: none;
+            color: lightgreen;
+        }
+        a:hover{
+            color: springgreen;
+        }
+    }
+}
+.registro{
+     border: $borde;
+     background-image: linear-gradient(45deg, orange,green);
+     .registro__titulo{
+         text-decoration: underline;
+         text-align: center;
+         margin-bottom: ($px*3)/2;
+     }
+     legend{
+         text-align: center;
+         text-decoration: underline;
+     }
+     input{
+         margin-bottom: 20px;
+     }
+     fieldset{
+         margin-bottom: 20px;
+         color: darkgreen;
+         fieldset{
+             border: $borde;    
+         }
+     }
+     .botonRegistro{
+         background-color: darkorange;
+         box-shadow: 0 0 8px 0 yellowgreen;
+     }
+}

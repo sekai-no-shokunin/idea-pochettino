@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--cosas para averiguar-->
+<!--mensajeria es front o back?--><!--seria necesario para la seccion de mercado-->
+<!--como cambia de logout a login?-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="widht=divice-width,initial-scale=1.0">     
+        <!--fuentes-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+        <!--BS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!--css-->
+        <link rel="stylesheet" href="./css/estil.css">
+        <!--SEO-->
+        <meta name="keywords" content="zombies, supervivencia, apocalipsis, caminantes,">
+        <title>Guia de supervivencia Apocalipsis Zombie</title>
+        <meta name="description" content="G.A.Z es un sitio en donde se reune y comparte informacion;se comercia y se brindan servicios para mejorar las posibilidades de supervivencia en este apocalipsis zombie.O tal vez un delirio de alguien que se engancho con la serie The Walking Dead en netflix estos meses anteriores ">
+    </head>
+    <body>
+        <header class="cabeza row container-fluid">           
+            <h1 class="cabeza__titulo col-12 col-lg-12" id="index">G.A.Z</h1>
+                <ul class="menu col-12 col-lg-12">
+                    <li class="menu__items"><a href="index.html" class="menu__enlace">Menu</a></li>
+                    <li class="menu__items"><a href="./views/servicios.html" class="menu__enlace">Servicios</a></li>
+                    <li class="menu__items"><a href="./views/ups.html" class="menu__enlace">Contactos</a></li>
+                    <li class="menu__items menu__items--end"><a href="./views/usuario.html" class="menu__enlace">Usuarios</a></li>
+                </ul>
+        </header>
+            <section class="container-fluid">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/carrusel-1-min.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Red de Comercio e Informacion</h2>
+                            <p>Una de los 5 mejores sitios de este apocalipsis</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/carrusel-2-min.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Informacion de calidad</h2>
+                            <p>Actualizacion constante y de primera mano de toda la info para la supervivencia</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/carrusel-3-min.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Mercado</h2>
+                            <p>La mejor zona de comercio y la forma mas segura de conocer gente</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/carrusel-4-min.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Productos y servicios</h2>
+                            <p>Manufactura propia y de calidad. Prestaciones acorde a tus necesidades</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                    
+            </section>
+        </div><hr>
+        <div class="musica col-12 col-lg-6"> <h3 class="musica__texto">Cancioncita para tu expedicion de hoy</h3> <br><audio src="./audio/lunes por la madrugadaabuelos de la nada (NUEVOEXITO.ORG).mp3" controls class="musica__audio"></audio>
+        </div><hr>
+        <div class="intro container-fluid col">
+            <h2 class="intro__titulo">Zombienvenidos</h2>
+            <p class="intro__texto">Si estas en este sitio, quiere decir dos cosas:aun no te mordieron y que seguramente quieras unformacion.
+                Aqui encontraras toda la guia necesaria para empezar tu supervivencia, mejorarla y/o cambiarla. Ten en cuenta que ya no es el mundo que conociamos.
+                Tambien podras visitar nuestra comunidad para aprovechar las experiencias de los usuarios y compartir las tuyas.
+                A diario se presentaran las noticias, eventos y tips para el superviviente.
+                por ultimo y no menos importante puedes pasar por nuestra zona de comercio (tambien tenemos que sobrevivir viste), donde puedes adquierir diversos productos o bien donar alguna comida enlatada que tengas demas
+            </p>
+        </div>
+        <section class="novedades container-fluid row">
+            <article class="novedades__contenedor col-12 col-lg-4">
+                <div class="card">
+                    <img src="./img/navidad_promo-min.png" alt="" style="width:100%;" class="card__img">
+                    <div class="info">
+                        <h3 class="info__nombre"><b>Oferta Navideña</b></h3>
+                        <p>Enterate de los nuevos productos que estan a disposicion y los exclusivos descuentos navideños... Porquen incluso Papa Noel puede ser un zombie</p>
+                        <a href="./views/servicios.html" class="boton">
+                            <span class="boton__texto">Ver mas</span>
+                            <i class="boton__icon"><img src="./img/icon-min.png" alt=""></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="novedades__contenedor col-12 col-lg-4">
+                <div class="card">
+                    <img src="./img/comision-min.png" alt="" style="width:100%;" class="card__img">
+                    <div class="info">
+                        <h3 class="info__nombre"><b>Transporte Personalizado</b></h3>
+                        <p>Asegura tus paquetes en nuestro sistema de comisionistas profesionales y de vasta experiencia en el viaje por el territorio</p>
+                                <a href="./views/ups.html" class="boton">
+                                    <span class="boton__texto">Ver mas</span>
+                                    <i class="boton__icon"><img src="./img/icon-min.png" alt=""></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="novedades__contenedor col-12 col-lg-4">
+                    <div class="card">
+                        <img src="./img/ficha-min.jpg" alt="" style="width:100%;" class="card__img">
+                        <div class="info">
+                            <h3 class="info__nombre"><b>Conoce tus enemigos</b></h3>
+                            <p>El enemigo de mi enemigo es mi amigo... frase que nada tiene que ver pero que es muy linda cuando hablamos de enemigos.</p>
+                            <a href="./views/ups.html" class="boton">
+                                <span class="boton__texto">Ver mas</span>
+                                <i class="boton__icon"><img src="./img/icon-min.png" alt=""></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+                <main class="contenido row container-fluid"> 
+                    <section class="secciones col-12 col-lg-8">
+                    <div class="secciones__intro">
+                       <h2 class="secciones__titulo">Toda la informacion que necesitas para sobrevivir en el apocalipsis</h2><br>
+                       <p class="secciones__texto">En estos tiempos que corren, la vida cotidiana depende constantemente de nuestra capacidad de adaptarnos y la cantidad de conocimiento que vayamos adquiriendo.
+                           Tanto si resien estas encontrandote con la cruda realidad porque te exiliaron, vivias en un bunker y no tenias ni la palida idea de como esta todo o simplemente te interesa profundizar tus conocimientos, en esta seccion encontraras diversostipos de conocimientos de supervivencia que constantemente tratamos de actualizar.. esperamos te sean de utilidad y logres sobrevivir mas de una semana....
+                       </p>
+                   </div>
+                       <article class="lista col">
+                           <div class="lista__seccion row">
+                               <ul class="lista__tema col-5 col-lg-4"><h3 class="lista__titulo">Supervivencia</h3>
+                                   <li><a  href="./views/ups.html" class="lista__enlace lista__enlace--destacado">Agua</a></li>
+                                   <li><a  href="./views/ups.html" class="lista__enlace ">Fuego</a></li>
+                                   <li><a  href="./views/ups.html" class="lista__enlace">Alimentos y Suministros</a></li>
+                                   <li><a  href="./views/ups.html" class="lista__enlace">Refugio</a></li>
+                                   <li><a  href="./views/ups.html" class="lista__enlace">Clases</a></li>
+                               </ul>
+                                   <p class=" lista__texto col-7 col-lg-8 ">
+                                       Es de vital importancia tener conocimiento de las cuestiones basicas para la supervivencia. Saber como mejorar el rinde de tu fuego por ej. puede asegurarte un dia mas.
+                                   </p>
+                           </div>
+                           <div class=" lista__seccion row">
+                               <ul class=" lista__tema col-5 col-lg-4"><h3 class="lista__titulo">Armas</h3>
+                                   <li><a  href="./views/ups.html" class="lista__enlace">Livianas</a></li>
+                                   <li><a  href="./views/ups.html" class="lista__enlace">Pesadas</a></li>
+                                   <li><a  href="./views/ups.html" class="lista__enlace">Distancia</a></li>
+                                   </ul>
+                                   <p class=" lista__texto col-7 col-lg-8 ">
+                                       Sepas o no usarlas, es necesario conocerlas y entender cuales son las ventajas y desventajas de cada una
+                                   </p>
+                           </div>
+                           <div class=" lista__seccion row">
+                               <ul class=" lista__tema col-5 col-lg-4"><h3 class="lista__titulo">Armaduras</h3>
+                                   <li><a  href="./views/ups.html" class="lista__enlace">Livianas</a></li>
+                                   <li><a  href="./views/ups.html" class="lista__enlace">Intermedio</a></li>
+                                   <li><a  href="./views/ups.html" class="lista__enlace">Pesadas</a></li>
+                               </ul>
+                               <p class="lista__texto col-7 col-lg-8 ">
+                                   La proteccion adecuada puede marcar la linea entre amanecer como humano o como un caminante mas
+                               </p>
+                           </div>
+                           <div class=" lista__seccion row">
+                               <ul class="lista__tema col-5 col-lg-4"><h3 class="lista__titulo">Zombies</h3>
+                                   <li><a  href="./views/ups.html" class="lista__enlace">Clases y Caracteristicas</a></li>
+                                   <li><a  href="./views/ups.html" class="lista__enlace lista__enlace--destacado">Consejos y tips</a></li>
+                               </ul>
+                               <p class="lista__texto col-7 col-lg-8 ">Conoce a cada zombie, sus fortalezas, habitos y debilidades. Con esa informacion podras hacer mas seguras tus expediciones y reducir tus daños</p>
+                           </div>
+                           <div class=" lista__seccion row">
+                               <ul class=" lista__tema col-5 col-lg-4"><h3 class="lista__titulo">Mapas</h3>
+                                   <li><a  href="./views/ups.html" class="lista__enlace">General</a></li>
+                                   <li><a  href="./views/ups.html" class="lista__enlace">Recursos</a></li>
+                                   <li><a  href="./views/ups.html" class="lista__enlace">Asentamientos</a></li>
+                                   <li><a  href="./views/ups.html" class="lista__enlace lista__enlace--destacado">Peligros</a></li>
+                               </ul>
+                               <p class="lista__texto col-7 col-lg-8">
+                                   La ubicacion ha sido por siglos una de las cosas mas importantes a la hora de mejorar las probabilidades de supervivencia. Conoce la ubicacion de recursos, peligros y asentamientos y planea mejor tus excursiones.
+                               </p>
+                           </div>
+                       </article>
+               </section>
+                   <aside class="lateral col-12 col-lg-4">
+                       <div class="lateral__videos">Chequeate estos Tutorial tips <br>
+                           <iframe class="lateral__videos--modif" width="300" height="150" src="https://www.youtube.com/embed/AXmNcCjsO7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen muted></iframe>
+                           <iframe class="lateral__videos--modif width="300" height="150" src="https://www.youtube.com/embed/ISKhLiSJCFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                           <iframe class="lateral__videos--modif width="300" height="150" src="https://www.youtube.com/embed/m5sZujvBlVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                           <iframe class="lateral__videos--modif width="300" height="150" src="https://www.youtube.com/embed/Q-9wf0nCyBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                       </div>
+                        <div class="lateral__anuncios">Si si, en pleno apocalipsis aun hay Sponsors! <br>
+                           <a href="https://adermicinacrema.com.ar/"><img src="./img/anuncios/anuncio.jpg" alt="anuncio-adermicina" class="lateral_img"></a>
+                           <a href="http://www.marolio.com.ar/"><img src="./img/anuncios/marolio.jpeg" alt="anuncio-marolio" class="lateral_img"></a>
+                           <a href="https://www.elite.com.ar/"><img src="./img/anuncios/elite.jpg" alt="" class="lateral_img"></a>
+                       </div>
+                   </aside> 
+            </main>        
+        <footer class="pie container-fluid">
+            <p class=" pie__texto">Reservaria los derechos pero estamos en un apocalipsis Zombie
+            Si eres un zombie visitando el sitio te recomiendo ir a GBZ (Guia del Buen Zombie)<a href="#index" class="pie__enlace">Subir</a></p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    </body>
+</html>
