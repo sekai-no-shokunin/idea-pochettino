@@ -24,14 +24,27 @@ body{
 }
 /* header*/
 .cabeza{
-    height: 150px;
-    background-image: radial-gradient(darkgreen, black);
-    border-bottom: solid 3px orangered;
+    height: 200px;
+    background:grey;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-content: center;
+    div{
+        background: grey;
+        width: 85%;
+        height: 85%;
+        box-shadow: inset -3px -3px 5px silver, inset 3px 3px 15px black;
+        border-radius: 25px;
+    }
 }
 .cabeza__titulo{
     text-align: center;
+    justify-items: center;
     color: yellow; 
     margin: 0%;
+    background: chartreuse;
 }
 .menu{
     list-style-type: none;
