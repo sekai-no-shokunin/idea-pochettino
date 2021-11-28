@@ -15,20 +15,28 @@
 <meta name="description" content="Se parte de la comunidad de G.A.Z para aprovechar todos los beneficios y mantener a tu acance toda la informacion necesaria para sobrevivir ">
 </head>
 <body>
-<header class="cabeza row container-fluid">           
-    <h1 class="cabeza__titulo col-12 col-lg-12">Usuarios</h1>
-        <ul class="menu col-12 col-lg-12">
-            <li class="menu__items"><a href="../index.html" class="menu__enlace">Inicio</a></li>
-            <li class="menu__items"><a href="ups.html" class="menu__enlace">Servicios</a></li>
-            <li class="menu__items"><a href="ups.html" class="menu__enlace">Contactos</a></li>
-            <li class="menu__items menu__items--end"><a href="usuario.html" class="menu__enlace">Usuarios</a></li>
-        </ul>
-</header>
+    <header class="cabeza">
+        <!--logo-enlace a index-->
+        <a href="index.html" class="logo"><img src="./img/Logo.png" alt="logo" class="logo__img"></a>
+        <!--Nombre de Empresa-->
+        <h1 class="cabeza__h1" id="index">Pixies</h1>
+        <!--Menu navegacion-->
+        <nav class="menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./views/productos.html">Productos</a></li>
+                <li><a href="./views/servicios.html">Servicios</a></li>
+                <li><a href="./views/especialistas.html">Especialistas</a></li>
+            </ul>
+        </nav>
+    </header>
 <body>
-    <main class="container-fluid row fondoUsuario">
-        <section class="sesion col-12 col-lg-5">
-            <h2 class="sesion__titulo">Ingresa a nuestra comunidad y aprovecha todos los beneficios que tenemos y vamos adquiriendo, informacion,mapas,recursos,productos y mucho mas (o no tanto)</h2>
-            <!--inicio de sesion-->
+    <main>
+        <section>
+            <h2>Ingresa a nuestra comunidad y aprovecha todos los beneficios, ofertas y novedades que Cooperativa Pixies Mercenary tiene para ofrecer</h2>
+        </section>
+        <!--inicio de sesion-->
+        <section>
             <form action="" method="GET" enctype="">
                 <fieldset class="signUp">
                     <input type="text" name=usuario placeholder="Nombre de usuario"><br>
@@ -36,34 +44,26 @@
                     <input type="submit" value="Iniciar sesion" class="signUps"><br>
                     <a href="questions.html">Olvidaste tu Contraseña?</a><br>
                     <a href="#reg">Crear Cuenta</a>
-                </fieldset><hr><br><hr>
-            </section>
+                </fieldset>
+        </section>
             <!--formulario de registro-->
             <section>
                 <h2>Crea tu cuenta libre de mordidas</h2>
+            </section>
+            <section>
                 <form action="" method="GET" enctype="">
                     <fieldset>
                     <legend id="reg">Datos de cuenta</legend>
                         <label for="nombre">Nombre de Usuario</label>
                         <input type="text" name=nombre><br>
+                        <label for="edad">Edad</label>
+                        <input type="text" name=edad>
                         <label for="email">Correo electronico</label>
                         <input type="email" name=email><br>
                         <label for="password">Contraseña</label>
                         <input type="password" name=password><br>
                         <label for="password1"> Confirma contraseña</label>
                         <input type="password" name=password1><br>
-                        <label for="edad">Edad</label>
-                        <input type="text" name=edad>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Walking Dead Preguntas</legend>
-                        <label for="question1">Cuantos Zombies mataste?</label>
-                        <input type="text" name=question1><br>
-                        <label for="question2">Cuantas personas mataste?</label>
-                        <input type="text"name=question2><br>
-                        <fieldset><legend>Por que?</legend>
-                            <textarea name="question2" id="" cols="30" rows="15" placeholder="escribe tu respuesta"></textarea>
-                        </fieldset>
                     </fieldset>
                 <fieldset>
                     <legend>Datos extra</legend>
@@ -82,8 +82,22 @@
         </section>
     </main>
     <!--footer-->
-    <footer>
-
+    <footer class="pie">
+        <!--logo enlace index-->
+        <a href="index.html"><img src="./img/logo.png" alt="logo-index"></a>
+        <!--redes sociales-->
+        <div>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+        <!--datos de la empresa-->
+        <address>
+            Oficinas: Al norte de la ciudad.
+            Telefono:249-4366xxx
+            E-mail: Pixies.coop@apocalipmail.zom 
+        </address>
+        <p class=" pie__texto">© Copyright derechos reservados por Cooperativa Pixies Mercenary<a href="#index" class="pie__enlace">Subir</a></p>
     </footer>
 </body>
 </html>
