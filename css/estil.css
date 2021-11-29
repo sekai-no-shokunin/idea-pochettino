@@ -1,5 +1,5 @@
 body {
-  background-color: black; }
+  background-color: skyblue; }
 
 .cabeza {
   background: navajowhite;
@@ -30,3 +30,17 @@ body {
       .cabeza .menu ulli {
         font-size: 14px;
         margin-left: 10px; }
+
+.ventana {
+  background-color: palevioletred;
+  color: peachpuff;
+  width: 500px;
+  height: auto;
+  display: none;
+  position: sticky;
+  left: 35%;
+  top: 35%; }
+  .ventana .cerrar {
+    position: absolute;
+    right: 3px;
+    top: 2px; }

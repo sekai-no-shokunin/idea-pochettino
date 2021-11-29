@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color:skyblue;
 }
 .cabeza{
     background:navajowhite;
@@ -38,5 +38,20 @@ body{
                 margin-left: 10px;
             }
         }    
+    }
+}
+.ventana{
+    background-color: palevioletred;
+    color: peachpuff;
+    width: 500px;
+    height: auto;
+    display: none;
+    position: sticky;
+    left: 35%;
+    top: 35%;
+    .cerrar{
+        position: absolute;
+        right: 3px;
+        top: 2px;
     }
 }
