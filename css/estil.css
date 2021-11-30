@@ -206,3 +206,66 @@ body {
     font-size: 30px;
     text-transform: uppercase;
     transform: rotate(336deg); }
+
+.muestra {
+  width: 100%;
+  height: 600px;
+  margin-top: 50px;
+  display: grid;
+  place-items: center; }
+  .muestra .muestra__caja {
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: transparent;
+    box-shadow: inset -3px -3px 5px turquoise, inset 3px 3px 15px grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .muestra .muestra__caja .caja-img {
+      width: 90%;
+      padding: 10px;
+      border-radius: 20px;
+      box-shadow: inset -3px -3px 5px turquoise, inset 3px 3px 15px grey; }
+      .muestra .muestra__caja .caja-img .muestra__img {
+        width: 100%;
+        border-radius: 20px; }
+    .muestra .muestra__caja .muestra__info {
+      color: fuchsia;
+      width: 90%;
+      height: auto;
+      border-radius: 20px;
+      padding: 10px;
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: inset -3px -3px 5px turquoise, inset 3px 3px 15px grey; }
+      .muestra .muestra__caja .muestra__info h2 {
+        text-align: center;
+        font-family: "Saira Stencil One", cursive;
+        font-size: 22px;
+        width: 80%;
+        margin-top: 20px;
+        padding: 5px;
+        border-radius: 20px;
+        box-shadow: -3px -3px 5px turquoise, 3px 3px 15px grey; }
+      .muestra .muestra__caja .muestra__info p {
+        text-align: center;
+        font-family: proxima-nova, monospace;
+        width: 80%;
+        margin-top: 20px;
+        padding: 5px;
+        border-radius: 20px;
+        box-shadow: -3px -3px 5px turquoise, 3px 3px 15px grey; }
+      .muestra .muestra__caja .muestra__info a {
+        width: 50%;
+        height: min-content;
+        font-family: "Saira Stencil One", cursive;
+        margin-top: 20px;
+        text-align: center;
+        padding: 5px;
+        text-decoration: none;
+        border-radius: 20px;
+        box-shadow: -3px -3px 5px turquoise, 3px 3px 15px grey; }

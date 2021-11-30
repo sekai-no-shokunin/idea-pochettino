@@ -219,6 +219,7 @@ body{
     }
 }
 /*ESTILOS INDEX*/
+//SECTION.INTRO
 .intro{
     background-color: $color1;
     width: 100%;
@@ -263,5 +264,78 @@ body{
         font-size: 30px;
         text-transform: uppercase;
         transform: rotate(336deg);               
+    }
+}
+//INVITACION A REGISTRO
+.muestra{
+    width: 100%;
+    height: 600px;
+    margin-top: 50px;
+    display: grid;
+    place-items: center;
+    .muestra__caja{        
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: transparent;
+        box-shadow: inset -3px -3px 5px turquoise, inset 3px 3px 15px grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .caja-img{
+            width: 90%;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: inset -3px -3px 5px turquoise, inset 3px 3px 15px grey;
+            .muestra__img{
+                width: 100%;
+                border-radius: 20px;
+            } 
+        }
+        .muestra__info{
+            color: $color2;
+            width: 90%;
+            height: auto;
+            border-radius: 20px;
+            padding: 10px;
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: inset -3px -3px 5px turquoise, inset 3px 3px 15px grey;
+            h2{
+                text-align: center;
+                font-family: $texto2;
+                font-size: 22px;
+                width: 80%;
+                margin-top: 20px;
+                padding: 5px;
+                border-radius: 20px;
+                box-shadow: -3px -3px 5px turquoise, 3px 3px 15px grey;
+                
+            }
+            p{
+                text-align: center;
+                font-family: $texto;
+                width: 80%;
+                margin-top: 20px;
+                padding: 5px;
+                border-radius: 20px;
+                box-shadow: -3px -3px 5px turquoise, 3px 3px 15px grey;
+            }
+            a{
+                width: 50%;
+                height: min-content;
+                font-family: $texto2;
+                margin-top: 20px;
+                text-align: center;
+                padding: 5px;
+                text-decoration: none;
+                border-radius: 20px;
+                box-shadow: -3px -3px 5px turquoise, 3px 3px 15px grey;
+            }
+
+        }
     }
 }
