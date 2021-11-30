@@ -7,6 +7,7 @@ $color0: black;
 $color1:#409be0;
 $color2:fuchsia;
 $texto:proxima-nova, monospace;
+$texto2:"Saira Stencil One", cursive;
 /*ESTILOS GENERALES*/
 body{
     background: $color0;
@@ -215,5 +216,52 @@ body{
         grid-area: texto;
         font-family: $texto;
         font-size: 12px;
+    }
+}
+/*ESTILOS INDEX*/
+.intro{
+    background-color: $color1;
+    width: 100%;
+    height: 445px;
+    
+    &::before{
+        content: "";
+        position: absolute;
+        background-color: $color2;
+        width: 100%;
+        height: 55%;
+        clip-path: polygon(0 0, 100% 0,75% 100%, 0 50% );        
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        background-color: $color0;
+        width: 100%;
+        height: 40%;
+        clip-path: polygon(0 100%, 100% 0, 100% 75%,50% 100%);
+    }
+    h2{
+        position: absolute;
+        .h2_1{
+            width: 75%;            
+            display: inline-block;
+            font-family: $texto2;
+            font-size: 42px;
+            transform: translateX(50px) translateY(25px);
+            text-transform: uppercase;            
+        }
+    }
+    h3{
+        position: absolute;
+        left: 25px;
+        bottom: 140px;
+        width: 35%;
+        width: inherit;            
+        color: white;
+        font-family: $texto;
+        font-size: 30px;
+        text-transform: uppercase;
+        transform: rotate(336deg);               
     }
 }
