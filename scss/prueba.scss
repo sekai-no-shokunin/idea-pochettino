@@ -1,57 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+//variables
+$color0: black;
+$color1:#409be0;
+$color2:fuchsia;
+/*header*/
 body{
-    background-color:skyblue;
+    background: $color0;
 }
 .cabeza{
-    background:navajowhite;
+    background-color: $color1;
     width: 100%;
     height: 100px;
-    margin: 0;
-    padding: 2em 2em 10em;
-    clip-path: polygon(0 0, 300% -350%, 80% 75%, 0 30%);
+    font-family: "Saira Stencil One", cursive;
     display: grid;
     grid-template-areas:
     "logo titulo titulo"
-    "menu menu menu"
-     ;
-    .logo{width: min-content;
+    "men men men"
+    ;
+    .logo{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: min-content;
         grid-area: logo;
         .logo__img{
-            width: min-content;
+            position: relative;
+            left: 8px;
         }
     }
     .cabeza__h1{
         grid-area: titulo;
+        color: $color0;
+        text-align: center;
+        font-size: 24px;
+        justify-content: space-between;
+        &::before{
+            content:"Cooperativa";
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        &::after{
+            content:"Mercenary";
+            font-size: 20px;
+            margin-left: 10px;
+        }
     }
     .menu{
-        grid-area: menu;
-        display: flex;
-        flex-direction: row;
-       
+        grid-area: men;
         ul{
             list-style: none;
-            font-size: 20px;
-            margin: 5px;
-            text-align: center;
-            display: inline;
-            &li{                
-                font-size: 14px;
-                margin-left: 10px;
+            display: flex;
+            justify-content: space-evenly;
+            li{
+                display: inline;
+                transform: translateY(-20px);
+                a {
+                    color: $color0;
+                    padding: 12px;
+                    display: inline-block;
+                    border: 3px solid transparent;
+                    position: relative;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-size: 14px;
+                    cursor: pointer;                
+                    .text {                      
+                      font-family: proxima-nova, monospace;
+                      transform: translate3d(0,12px,0);
+                      display: block;
+                      transition: transform 0.4s cubic-bezier(.2,0,0,1) 0.4s;
+                    }                
+                    &:after {
+                      position: absolute;
+                      content: '';
+                      bottom: -3px;
+                      left: 0,7em * 1.2;
+                      right: 0,7em * 1.2;
+                      height: 3px;
+                      background: $color2;
+                      transition:transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
+                        right 0.2s cubic-bezier(.04,.48,0,1) 0.6s,
+                        left 0.4s cubic-bezier(.04,.48,0,1) 0.6s;
+                      transform-origin: left;
+                    }                
+                }                
+                    .line {
+                        position: absolute;
+                        background: $color2;                
+                        &.-right,
+                        &.-left {
+                        width: 3px;
+                        bottom: -3px;
+                        top: -3px;
+                        transform: scale3d(1,0,1);
+                    }                
+                    &.-top,
+                    &.-bottom {
+                      height: 3px;
+                      left: -3px;
+                      right: -3px;
+                      transform: scale3d(0,1,1);
+                    }                
+                    &.-right {
+                      right: -3px;
+                      transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.23s;
+                      transform-origin: top;
+                    }                
+                    &.-top {
+                      top: -3px;
+                      transition: transform 0.08s linear 0.43s;
+                      transform-origin: left;
+                    }                
+                    &.-left {
+                      left: -3px;
+                      transition: transform 0.08s linear 0.51s;
+                      transform-origin: bottom;
+                    }                
+                    &.-bottom {
+                      bottom: -3px;
+                      transition: transform 0.3s cubic-bezier(1,0,.65,1.01);
+                      transform-origin: right;
+                    }  
+                  }                
+                    a:hover,
+                    a:active {
+                
+                    .text {
+                        transform: translate3d(0,0,0);
+                        transition: transform 0.6s cubic-bezier(.2,0,0,1) 0.4s;
+                    }                
+                    &:after {
+                        transform: scale3d(0,1,1);
+                        right: -3px;
+                        left: -3px;
+                        transform-origin: right;
+                        transition:transform 0.2s cubic-bezier(1,0,.65,1.01) 0.17s,
+                        right 0.2s cubic-bezier(1,0,.65,1.01),
+                        left 0s 0.3s;
+                    }                
+                    .line {
+                        transform: scale3d(1,1,1);                
+                        &.-right {
+                            transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.2s;
+                            transform-origin: bottom;
+                        }                
+                        &.-top {
+                            transition: transform 0.08s linear 0.4s;
+                            transform-origin: right;
+                        }                
+                        &.-left {
+                            transition: transform 0.08s linear 0.48s;
+                            transform-origin: top;
+                        }                
+                        &.-bottom {
+                            transition: transform 0.5s cubic-bezier(0,.53,.29,1) 0.56s;
+                            transform-origin: left;
+                        }                                   
+                    }
+                }
             }
-        }    
+        }
     }
-}
-.ventana{
-    background-color: palevioletred;
-    color: peachpuff;
-    width: 500px;
-    height: auto;
-    display: none;
-    position: sticky;
-    left: 35%;
-    top: 35%;
-    .cerrar{
-        position: absolute;
-        right: 3px;
-        top: 2px;
-    }
-}
+}    
