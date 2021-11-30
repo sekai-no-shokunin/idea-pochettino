@@ -6,10 +6,12 @@
 $color0: black;
 $color1:#409be0;
 $color2:fuchsia;
-/*header*/
+$texto:proxima-nova, monospace;
+/*ESTILOS GENERALES*/
 body{
     background: $color0;
 }
+//HEADER
 .cabeza{
     background-color: $color1;
     width: 100%;
@@ -20,6 +22,7 @@ body{
     "logo titulo titulo"
     "men men men"
     ;
+    //LOGO
     .logo{
         display: flex;
         align-content: center;
@@ -31,6 +34,7 @@ body{
             left: 8px;
         }
     }
+    //H1
     .cabeza__h1{
         grid-area: titulo;
         color: $color0;
@@ -48,6 +52,7 @@ body{
             margin-left: 10px;
         }
     }
+    //MENU
     .menu{
         grid-area: men;
         ul{
@@ -68,7 +73,7 @@ body{
                     font-size: 14px;
                     cursor: pointer;                
                     .text {                      
-                      font-family: proxima-nova, monospace;
+                      font-family: $texto;
                       transform: translate3d(0,12px,0);
                       display: block;
                       transition: transform 0.4s cubic-bezier(.2,0,0,1) 0.4s;
@@ -164,4 +169,51 @@ body{
             }
         }
     }
-}    
+}
+.pie{
+    width: 100%;
+    height: 150px;
+    display: grid;
+    grid-template-areas:
+    "logof datos menuf"
+    "redes datos menuf"
+    "texto texto texto"
+    ;
+    grid-template-columns: 1fr 2fr 2fr;
+    background-color: $color1;
+
+    .logoFooter{
+        grid-area: logof;
+        margin-top: 30px;
+        transform: translateX(10px);
+    }        
+    address{
+        grid-area: datos;
+        display: block;
+        font-family: $texto;
+        font-size: 12px;
+        margin-top: 30px;
+    }
+    .menuFooter{
+        margin-top: 30px;
+        grid-area: menuf;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(20%);
+        font-family: $texto;        
+        text-transform: uppercase;
+        a{
+            text-decoration: none;
+            width: min-content;
+            &:hover{
+                border: $color2 solid 3px;
+                color: $color2;
+            }
+        }
+    }
+    .pie__texto{
+        grid-area: texto;
+        font-family: $texto;
+        font-size: 12px;
+    }
+}

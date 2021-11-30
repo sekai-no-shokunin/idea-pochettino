@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0; }
 
-/*header*/
+/*ESTILOS GENERALES*/
 body {
   background: black; }
 
@@ -129,3 +129,39 @@ body {
           .cabeza .menu ul li a:active .line.-bottom {
             transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
             transform-origin: left; }
+
+.pie {
+  width: 100%;
+  height: 150px;
+  display: grid;
+  grid-template-areas: "logof datos menuf" "redes datos menuf" "texto texto texto";
+  grid-template-columns: 1fr 2fr 2fr;
+  background-color: #409be0; }
+  .pie .logoFooter {
+    grid-area: logof;
+    margin-top: 30px;
+    transform: translateX(10px); }
+  .pie address {
+    grid-area: datos;
+    display: block;
+    font-family: proxima-nova, monospace;
+    font-size: 12px;
+    margin-top: 30px; }
+  .pie .menuFooter {
+    margin-top: 30px;
+    grid-area: menuf;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(20%);
+    font-family: proxima-nova, monospace;
+    text-transform: uppercase; }
+    .pie .menuFooter a {
+      text-decoration: none;
+      width: min-content; }
+      .pie .menuFooter a:hover {
+        border: fuchsia solid 3px;
+        color: fuchsia; }
+  .pie .pie__texto {
+    grid-area: texto;
+    font-family: proxima-nova, monospace;
+    font-size: 12px; }
