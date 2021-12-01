@@ -2,6 +2,37 @@
   margin: 0;
   padding: 0; }
 
+@keyframes promo {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03); }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9); }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.01, 1.01, 1.01);
+    transform: scale3d(1.01, 1.01, 1.01); }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97); }
+  to {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); } }
+
 /*ESTILOS GENERALES*/
 body {
   background: black; }
@@ -166,6 +197,10 @@ body {
     font-family: proxima-nova, monospace;
     font-size: 12px; }
 
+.divisor {
+  color: fuchsia;
+  height: 4px; }
+
 /*ESTILOS INDEX*/
 .intro {
   background-color: #409be0;
@@ -181,48 +216,69 @@ body {
   .intro::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 15%;
+    right: 8%;
     background-color: black;
-    width: 100%;
-    height: 40%;
-    clip-path: polygon(0 100%, 100% 0, 100% 75%, 50% 100%); }
+    width: 110px;
+    height: 110px;
+    transform: rotate(45deg); }
   .intro h2 {
     position: absolute; }
     .intro h2 .h2_1 {
-      width: 75%;
+      width: 80%;
       display: inline-block;
       font-family: "Saira Stencil One", cursive;
-      font-size: 42px;
-      transform: translateX(50px) translateY(25px);
+      font-size: 2em;
+      transform: translateX(50px) translateY(100px);
       text-transform: uppercase; }
   .intro h3 {
     position: absolute;
-    left: 25px;
-    bottom: 140px;
-    width: 35%;
-    width: inherit;
+    right: 13%;
+    bottom: 18%;
+    width: 70px;
+    padding: 5px;
+    display: block;
+    z-index: 1;
     color: white;
     font-family: proxima-nova, monospace;
-    font-size: 30px;
-    text-transform: uppercase;
-    transform: rotate(336deg); }
+    font-size: 18px;
+    text-transform: uppercase; }
 
 .muestra {
   width: 100%;
-  height: 600px;
+  height: 1500px;
   margin-top: 50px;
   display: grid;
-  place-items: center; }
+  place-items: center;
+  position: relative; }
+  .muestra .muestra__intro {
+    width: 80%;
+    color: white;
+    display: inline-block;
+    text-align: justify;
+    font-family: proxima-nova, monospace;
+    line-height: 40px; }
+    .muestra .muestra__intro .slogan {
+      font-size: 20px; }
+    .muestra .muestra__intro::before {
+      content: "";
+      width: 100%;
+      height: 400px;
+      background: #409be0;
+      position: absolute;
+      z-index: -1;
+      transform: translateY(-120px) translateX(-50px) skewY(-35deg); }
   .muestra .muestra__caja {
     width: 80%;
     height: auto;
     padding: 20px;
     border-radius: 20px;
-    background-color: transparent;
+    background-color: #409be0;
     box-shadow: inset -3px -3px 5px turquoise, inset 3px 3px 15px grey;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    transform: translateY(100px); }
     .muestra .muestra__caja .caja-img {
       width: 90%;
       padding: 10px;
@@ -232,7 +288,7 @@ body {
         width: 100%;
         border-radius: 20px; }
     .muestra .muestra__caja .muestra__info {
-      color: fuchsia;
+      color: black;
       width: 90%;
       height: auto;
       border-radius: 20px;
@@ -269,3 +325,52 @@ body {
         text-decoration: none;
         border-radius: 20px;
         box-shadow: -3px -3px 5px turquoise, 3px 3px 15px grey; }
+
+/*INVITACION A PRODUCTOS Y SERVICIOS*/
+.intro2 {
+  background: #409be0;
+  width: 100%;
+  height: 400px;
+  margin-top: 50px;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); }
+  .intro2 h2 {
+    font-family: "Saira Stencil One", cursive;
+    font-size: 32px;
+    display: inline-block;
+    width: 90%;
+    padding: 10px; }
+    .intro2 h2::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-color: fuchsia;
+      transform: translateX(200%) translateY(130%) skewY(-25deg); }
+    .intro2 h2::after {
+      content: "Por el precio adecuado, no tienen que ser necesariamente zombies";
+      display: inline-block;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      font-family: proxima-nova, monospace;
+      font-size: 12px;
+      transform: translateX(90%) translateY(80%) skewY(-15deg); }
+  .intro2 p {
+    width: 40%;
+    font-family: proxima-nova, monospace;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateY(50%) translateX(20%); }
+
+.pys {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  background-color: #409be0; }
+  .pys .pys__card {
+    width: 10px;
+    height: 70%;
+    margin: 10px; }
