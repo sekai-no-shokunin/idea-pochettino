@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
     <!--CSS-->
     <link rel="stylesheet" href="../css/estil.css">
     <!--SEO-->
@@ -14,227 +18,191 @@
 <body>
     <header class="cabeza">
         <!--logo-enlace a index-->
-        <a href="../index.html" class="logo"><img src="./img/Logo.png" alt="logo" class="logo__img"></a>
+        <a href="../index.html" class="logo"><img src="../img/Logo.png" alt="logo" class="logo__img"></a>
         <!--Nombre de Empresa-->
         <h1 class="cabeza__h1" id="index">Pixies</h1>
         <!--Menu navegacion-->
         <nav class="menu">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="usuario.html">Usuario</a></li>
+            <ul class="menu__list">
+                <li><a href="../index.html">
+                    <span class="text">Inicio</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                    </a>
+                </li>
+                <li><a href="productos.html">
+                    <span class="text">Productos</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                    </a>
+                </li>
+                <li><a href="servicios.html">
+                    <span class="text">Servicios</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                    </a>
+                </li>
+                <li><a href="usuario.html">
+                    <span class="text">Presupuesto</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
     <!--slogan especialistas-->
-    <section>
+    <section class="intro-especialista">
         <h2>Nuestros especialistas al servicio de cada cliente particular </h2>
     </section>
     <!--contenido-->
-    <main>
-        <div class="contenedor">
-            <div class="glass_card">
-                <div class="contentTop">
-                    <img src="../img/perfil-1.png" alt="berseker">
-                    <h2>Bersek</h2>
-                    <h3>Psicopata</h3>
-                    <p>Luchador cuerpo a cuerpo, temerario, moral cuestionable, ideal para trabajos que no requieran sutileza</p>
-                </div>
-                <div class="contentBottom">
-                    <div class="socialIcons">
-                        <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="boton">
-                        <a href="">Contratar</a>
-                    </div>
-                </div>
+    <main class="contenedor-especialista">
+        <div class="card-especialista">
+            <div class=" tarjeta frente">
+                <img class="img-especialista" src="../img/perfil-1.png" alt="especialista berseker">
+                <h3 class="especialista-nombre">Berseker</h3>                
+            </div>
+            <div class="tarjeta atras">
+                <ul>Habilidades
+                    <li>Combate con cuchillos</li>
+                    <li>Inmunidad al miedo</li>
+                    <li>Rastreo</li>
+                    <li>Acrobata</li>
+                    <li>Resistencia al dolor</li>
+                </ul>
             </div>
         </div>
-        <div class="contenedor">
-            <div class="glass_card">
-                <div class="contentTop">
-                    <img src="../img/perfil-2.png" alt="bill">
-                    <h2>Bill</h2>
-                    <h3>Alguacil</h3>
-                    <p>Gran disparador, estratega, lider nato y un inquebrantable sentido del deber. Ideal para expediciones grupales y/o proteccion</p>
-                </div>
-                <div class="contentBottom">
-                    <div class="socialIcons">
-                        <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="boton">
-                        <a href="">Contratar</a>
-                    </div>
-                </div>
+        <div class="card-especialista">
+            <div class="tarjeta frente">
+                <img class="img-especialista" src="../img/perfil-2.png" alt="especialista rick">
+                <h3 class="especialista-nombre">Buen Rick</h3>
+            </div>
+            <div class=" tarjeta atras">
+                <ul>Habilidades
+                    <li>excelente punteria</li>
+                    <li>Instructor</li>
+                    <li>Estratega</li>
+                    <li>Conduccion de vehiculos</li>
+                    <li>Idiomas</li>
+                </ul>
             </div>
         </div>
-        <div class="contenedor">
-            <div class="glass_card">
-                <div class="contentTop">
-                    <img src="../img/perfil-3.png" alt="saw">
-                    <h2>Saw</h2>
-                    <h3>Psicopata</h3>
-                    <p>Ademas de ser del mismo formato que Bersek, es un buen agente de saqueo. Especialista en incursiones a propiedades privadas no muy discretas</p>
-                </div>
-                <div class="contentBottom">
-                    <div class="socialIcons">
-                        <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="boton">
-                        <a href="">Contratar</a>
-                    </div>
-                </div>
+        <div class="card-especialista">
+            <div class="tarjeta frente">
+                <img class="img-especialista" src="../img/perfil-3.png" alt="especialista saw">
+                <h3 class="especialista-nombre">Saw</h3>                   
+            </div>
+            <div class="tarjeta atras">
+                <ul>Habilidades
+                    <li>Conocimientos de anatomia</li>
+                    <li>Inmunidad al miedo</li>
+                    <li>Bueno contra edificios</li>
+                    <li>Generar terror</li>
+                    <li>Resistencia al dolor</li>
+                </ul>
             </div>
         </div>
-        <div class="contenedor">
-            <div class="glass_card">
-                <div class="contentTop">
-                    <img src="../img/perfil-4.png" alt="Gabriela">
-                    <h2>Gabriela</h2>
-                    <h3>Medica militar</h3>
-                    <p>Especialista en rescate, apoyo medico de combate, grandes habilidades militares y bastos conocimientos en medicina</p>
-                </div>
-                <div class="contentBottom">
-                    <div class="socialIcons">
-                        <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="boton">
-                        <a href="">Contratar</a>
-                    </div>
-                </div>
+        <div class="card-especialista">
+            <div class="tarjeta frente">
+                <img class="img-especialista" src="../img/perfil-4.png" alt="especialista gabriela">
+                <h3 class="especialista-nombre">Gabriela</h3>                    
+            </div>
+            <div class="tarjeta atras">
+                <ul>Habilidades
+                    <li>Uso de pistolas</li>
+                    <li>Primeros auxilios</li>
+                    <li>Cirugias intermedias </li>
+                    <li>Atleta</li>
+                    <li>Supervivencia</li>
+                </ul>
             </div>
         </div>
-        <div class="contenedor">
-            <div class="glass_card">
-                <div class="contentTop">
-                    <img src="../img/perfil-5.png" alt="Tato">
-                    <h2>Tato</h2>
-                    <h3>Carpintero</h3>
-                    <p>grandes habilidades en madera y construccion, pero tambien formidable hombre de combate cuerpo a cuerpo que no cede ante el miedo ni el dolor</p>
-                </div>
-                <div class="contentBottom">
-                    <div class="socialIcons">
-                        <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="boton">
-                        <a href="">Contratar</a>
-                    </div>
-                </div>
+        <div class="card-especialista">
+            <div class="tarjeta frente">
+                <img class="img-especialista" src="../img/perfil-5.png" alt="especialista tato">
+                <h3 class="especialista-nombre">Tato</h3>                    
+            </div>
+            <div class="tarjeta atras">
+                <ul>Habilidades
+                    <li>Combate con armas cortopunzantes</li>
+                    <li>Mecanica</li>
+                    <li>Rastreo</li>
+                    <li>Caceria</li>
+                    <li>Carpinteria</li>
+                </ul>
             </div>
         </div>
-        <div class="contenedor">
-            <div class="glass_card">
-                <div class="contentTop">
-                    <img src="../img/perfil-6.png" alt="bob">
-                    <h2>Bob</h2>
-                    <h3>Constructor</h3>
-                    <p>Especialista adecuado para reparaciones, remodelaciones y mejoras de refugios, aldeas o bases. Experiencia en construccion bajo ataque</p>
-                </div>
-                <div class="contentBottom">
-                    <div class="socialIcons">
-                        <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="boton">
-                        <a href="">Contratar</a>
-                    </div>
-                </div>
+        <div class="card-especialista">
+            <div class="tarjeta frente">
+                <img class="img-especialista" src="../img/perfil-6.png" alt="especialista corcho">
+                <h3 class="especialista-nombre">Corcho</h3>                    
+            </div>
+            <div class="tarjeta atras">
+                <ul>Habilidades
+                    <li>Construccion</li>
+                    <li>combate cuerpo a cuerpo</li>
+                    <li>Resistencia fisica</li>
+                    <li>Arquitectura</li>
+                    <li>Demolicion</li>
+                </ul>
             </div>
         </div>
-        <div class="contenedor">
-            <div class="glass_card">
-                <div class="contentTop">
-                    <img src="../img/perfil-7.png" alt="jhonny">
-                    <h2>Jhonny</h2>
-                    <h3>Guardaespaldas</h3>
-                    <p>Ex-maton de la mafia, basta experiencia en proteccion, apriete, y eliminacion de personas. amplio conocimiento en tecnicas de tortura e interrogacion</p>
-                </div>
-                <div class="contentBottom">
-                    <div class="socialIcons">
-                        <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="boton">
-                        <a href="">Contratar</a>
-                    </div>
-                </div>
+        <div class="card-especialista">
+            <div class="tarjeta frente">
+                <img class="img-especialista" src="../img/perfil-7.png" alt="especialista frank">
+                <h3 class="especialista-nombre">Frank</h3>                    
+            </div>
+            <div class="tarjeta atras">
+                <ul>Habilidades
+                    <li>Combate con cuchillos</li>
+                    <li>Armas de fuego</li>
+                    <li>Interrogacion y tortura</li>
+                    <li>Asesinato</li>
+                    <li>guerra psicologica</li>
+                </ul>
             </div>
         </div>
-        <div class="contenedor">
-            <div class="glass_card">
-                <div class="contentTop">
-                    <img src="../img/perfil-8.png" alt="samanta">
-                    <h2>Samanta</h2>
-                    <h3>Marine</h3>
-                    <p>Especialista en combate cuerpo a cuerpo, uso de armas blancas, tacticas de infiltracion, rastreo y persecusion. Ideal para expediciones secretas y encargos silenciosos</p>
-                </div>
-                <div class="contentBottom">
-                    <div class="socialIcons">
-                        <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                        </ul>
-                    </div>
-                    <div class="boton">
-                        <a href="">Contratar</a>
-                    </div>
-                </div>
+        <div class="card-especialista">
+            <div class="tarjeta frente">
+                <img class="img-especialista" src="../img/perfil-8.png" alt="especialista Vero">
+                <h3 class="especialista-nombre">Vero</h3>     
+            </div>
+            <div class="tarjeta atras">
+                <ul>Habilidades
+                    <li>Combate con cuchillos</li>
+                    <li>Armas de fuego</li>
+                    <li>combate cuerpo a cuerpo</li>
+                    <li>Supervivencia</li>
+                    <li>Liderazgo</li>
+                </ul>
             </div>
         </div>
     </main>
     <!--footer-->
     <footer class="pie">
         <!--logo enlace index-->
-        <a href="../index.html"><img src="./img/logo.png" alt="logo-index"></a>
-        <!--redes sociales-->
-        <div>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-        </div>
+        <a href="../index.html" class="logoFooter"><img src="../img/logo.png" alt="logo-index" class="logoFooter__img"></a>
         <!--datos de la empresa-->
         <address>
-            Oficinas: Al norte de la ciudad.
-            Telefono:249-4366xxx
+            Oficinas: Al norte de la ciudad <br>
+            Telefono:249-4366xxx <br>
             E-mail: Pixies.coop@apocalipmail.zom 
         </address>
+        <div class="menuFooter">
+            <a href="../index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="usuario.html">Usuario</a>
+        </div>
         <p class=" pie__texto">© Copyright derechos reservados por Cooperativa Pixies Mercenary<a href="#index" class="pie__enlace">Subir</a></p>
     </footer>
-</body>
+    </body>
 </html>

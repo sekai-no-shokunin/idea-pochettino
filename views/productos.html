@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FUENTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap" rel="stylesheet">
     <!--CSS-->
     <link rel="stylesheet" href="../css/estil.css">
     <!--SEO-->
@@ -14,142 +18,133 @@
 <body>
     <header class="cabeza">
         <!--logo-enlace a index-->
-        <a href="../index.html" class="logo"><img src="./img/Logo.png" alt="logo" class="logo__img"></a>
+        <a href="../index.html" class="logo"><img src="../img/Logo.png" alt="logo" class="logo__img"></a>
         <!--Nombre de Empresa-->
         <h1 class="cabeza__h1" id="index">Pixies</h1>
         <!--Menu navegacion-->
         <nav class="menu">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="especialistas.html">Especialistas</a></li>
-                <li><a href="usuario.html">Usuario</a></li>
+            <ul class="menu__list">
+                <li><a href="../index.html">
+                    <span class="text">Inicio</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                    </a>
+                </li>
+                <li><a href="servicios.html">
+                    <span class="text">Servicios</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                    </a>
+                </li>
+                <li><a href="especialistas.html">
+                    <span class="text">Especialistas</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                    </a>
+                </li>
+                <li><a href="usuario.html">
+                    <span class="text">Presupuesto</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
     <!--Slogan de venta-->
-    <section class="intro">
+    <section class="presentacion">
+        <img src="../img/fondo1.png" alt="fondo">
         <h2>En nuestras manos, los recursos necesarios para su supervivencia</h2>
     </section>
     <!--contenido-->
-    <main>
-        <section>
-            <h2>El arma adecuada, trae resultados adecuados</h2>
-        </section>
-        <article>
-            <div>
-                <img src="../img/arma-1.png" alt="lanzagranadas" style="width:100%">
-                <div>
-                    <h3>Lanzagranadas</h3>
-                    <p>$13.000</p>
-                    <p>potente arma con gran daño de area (incluye 5 municiones)</p>
-                    <button><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
+    <main>        
+        <div class="intro__productos">
+            <h2>Para resultados adecuados <br> los elementos adecuados</h2>
+        </div>
+        <article class="venta__producto">
+            <div class="venta__card">
+                <img class="venta__img" src="../img/arma-1.png" alt="lanzagranadas">
+                <div class="venta__info">
+                    <h3 class="venta__articulo">Lanzador de granadas</h3>
+                    <p class="venta__precio">$13.000 (incluye 5 granadas)</p>                    
+                    <button class="venta__boton"><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
                 </div>
             </div>
-            <div>
-                <img src="../img/arma-2.png" alt="beretta" style="width:100%">
-                <div>
-                    <h3>Beretta</h3>
-                    <p>$5.000</p>
-                    <p>infaltable compañera del superviviente (incluye 1 cargador extra)</p>
-                    <button><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
+            <div class="venta__card">
+                <img class="venta__img" src="../img/arma-2.png" alt="beretta">
+                <div class="venta__info">
+                    <h3 class="venta__articulo">Beretta</h3>
+                    <p class="venta__precio">$5.000</p>
+                    <button class="venta__boton"><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
                 </div>
             </div>
-            <div>
-                <img src="../img/arma-3.png" alt="pistola de clavos" style="width:100%">
-                <div>
-                    <h3>Pistola de clavos</h3>
-                    <p>$2.000</p>
-                    <p>Una opcion que cambia la comodidad por la sustentabilidad de municiones (incluye cja de 200 clavos)</p>
-                    <button><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
+            <div class="venta__card">
+                <img class="venta__img" src="../img/arma-3.png" alt="pistola de clavos">
+                <div class="venta__info">
+                    <h3 class="venta__articulo">Pistola de clavos</h3>
+                    <p class="venta__precio">$2.000</p>
+                    <button class="venta__boton"><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
                 </div>
             </div>
-            <div>
-                <img src="../img/arma-4.png" alt="b-31" style="width:100%">
-                <div>
-                    <h3>B-3-1</h3>
-                    <p>$8.000</p>
-                    <p>para los amantes de aquel legendario Counter Strike</p>
-                    <button><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
+            <div class="venta__card">
+                <img class="venta__img" src="../img/arma-4.png" alt="b-31">
+                <div class="venta__info">
+                    <h3 class="venta__articulo">B-3-1</h3>
+                    <p class="venta__precio">$8.000</p>
+                    <button class="venta__boton"><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
                 </div>
             </div>
-        </article>
-        <section>
-            <h2>Un buen vehiculo...una buena expedicion</h2>
-        </section>
-        <article>
-            <div>
-                <img src="../img/vehiculo-1.png" alt="sidecar" style="width:100%">
-                <div>
-                    <h3>Motocicleta con sidecar</h3>
-                    <p>$22.000</p>
-                    <p>Agil vehiculo para la dupla o el compañero canino. buen espacio para el botin</p>
-                    <button><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
+        </article>        
+            <div class="intro__vehiculos">
+                <h2>Un buen vehiculo...una buena expedicion</h2>
+            </div>        
+        <article class="venta__vehiculo">
+            <div class="venta__card">
+                <img class="venta__img" src="../img/vehiculo-1.png" alt="sidecar">
+                <div class="venta__info">
+                    <h3 class="venta__articulo">Motocicleta con sidecar</h3>
+                    <p class="venta__precio">$22.000</p>
+                    <button class="venta__boton"><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
                 </div>
             </div>
-            <div>
-                <img src="../img/vehiculo-2.png" alt="choper" style="width:100%">
-                <div>
-                    <h3>Chopper 350cc</h3>
-                    <p>$30.000</p>
-                    <p>Para viajeros solitarios o para el disfrute de la ruta</p>
-                    <button><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
+            <div class="venta__card">
+                <img class="venta__img" src="../img/vehiculo-2.png" alt="choper">
+                <div class="venta__info">
+                    <h3 class="venta__articulo">Chopper 350cc</h3>
+                    <p class="venta__precio">$30.000</p>
+                    <button class="venta__boton"><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
                 </div>
             </div>
-            <div>
-                <img src="../img/vehiculo-3.png" alt="van reforzada" style="width:100%">
-                <div>
-                    <h3>Van Reforzada</h3>
-                    <p>$43.500</p>
-                    <p>El vehiculo de asalto y expedicion por excelencia, preparada para enfrentar la horda de frente</p>
-                    <button><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
+            <div class="venta__card">
+                <img class="venta__img" src="../img/vehiculo-3.png" alt="van reforzada">
+                <div class="venta__info">
+                    <h3 class="venta__articulo">Van Reforzada</h3>
+                    <p class="venta__precio">$43.500</p>
+                    <button class="venta__boton"><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
                 </div>
             </div>
-            <div>
-                <img src="../img/vehiculo-4.png" alt="camion" style="width:100%">
-                <div>
-                    <h3>Camion Volvo</h3>
-                    <p>$70.000</p>
-                    <p>Para viajes largos y seguros, para transporte de provisiones, para vivir en el... lo que quieras</p>
-                    <button><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
+            <div class="venta__card">
+                <img class="venta__img" src="../img/vehiculo-4.png" alt="camion">
+                <div class="venta__info">
+                    <h3 class="venta__articulo">Camion Volvo</h3>
+                    <p class="venta__precio">$70.000</p>
+                    <button class="venta__boton"><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
                 </div>
             </div>
-        </article>
-        <article>
-            <h2>Y ahora tambien repuestos</h2>
-            <div>
-                <img src="../img/repuesto-1.png" alt="escapes" style="width:100%">
-                <div>
-                    <h3>Escapes superiores</h3>
-                    <p>$1.500</p>
-                    <p>Escapes para camiones, vans y camionetas</p>
-                    <button><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
-                </div>
-            </div>
-            <div>
-                <img src="../img/repuesto-2.png" alt="ventanas" style="width:100%">
-                <div>
-                    <h3>Ventanas reforzadas</h3>
-                    <p>$1.250</p>
-                    <p>ventanas reforzadas para todoslos vehiculos</p>
-                    <button><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a></button>
-                </div>
-            </div>
-            <div>
-                <img src="../img/repuesto-3.png" alt="neumaticos" style="width:100%">
-                <div>
-                    <h3>Neumaticos</h3>
-                    <p>$2.700 el par</p>
-                    <p>Neumaticos para automovil y camiones</p>
-                    <button><a href="#"><img src="../img/Cash-min.png" alt="pagar"></a>
-                </div>
-            </div>
-        </article>
+        </article>        
     </main>
     <!--footer-->
     <footer class="pie">
         <!--logo enlace index-->
-        <a href="index.html" class="logoFooter"><img src="./img/logo.png" alt="logo-index" class="logoFooter__img"></a>
+        <a href="../index.html" class="logoFooter"><img src="../img/Logo.png" alt="logo-index" class="logoFooter__img"></a>
         <!--datos de la empresa-->
         <address>
             Oficinas: Al norte de la ciudad <br>
@@ -157,10 +152,10 @@
             E-mail: Pixies.coop@apocalipmail.zom 
         </address>
         <div class="menuFooter">
-            <a href="./views/productos.html">Productos</a>
-            <a href="./views/servicios.html">Servicios</a>
-            <a href="./views/especialistas.html">Especialista</a>
-            <a href="./views/usuario.html">Usuario</a>
+            <a href="../index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="especialistas.html">Especialista</a>
+            <a href="usuario.html">Usuario</a>
         </div>
         <p class=" pie__texto">© Copyright derechos reservados por Cooperativa Pixies Mercenary<a href="#index" class="pie__enlace">Subir</a></p>
     </footer>

@@ -18,93 +18,121 @@
     <meta name="description" content="En su seccion de servicios, Pixies, ofrece a los supervivientes una amplia diversidad de prestaciones y ofertas acordes a las necesidades actuales en este contexto apocaliptico">
 </head>
 <body>
-    <header>
+    <header class="cabeza">
         <!--logo-enlace a index-->
-        <a href="index.html" class="logo"><img src="./img/Logo.png" alt="logo" class="logo__img"></a>
+        <a href="../index.html" class="logo"><img src="../img/Logo.png" alt="logo" class="logo__img"></a>
         <!--Nombre de Empresa-->
         <h1 class="cabeza__h1" id="index">Pixies</h1>
         <!--Menu navegacion-->
         <nav class="menu">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="especialistas.html">Especialistas</a></li>
-                <li><a href="usuario.html">Usuario</a></li>
+            <ul class="menu__list">
+                <li><a href="../index.html">
+                    <span class="text">Inicio</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                    </a>
+                </li>
+                <li><a href="productos.html">
+                    <span class="text">Productos</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                    </a>
+                </li>
+                <li><a href="especialistas.html">
+                    <span class="text">Especialistas</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                    </a>
+                </li>
+                <li><a href="usuario.html">
+                    <span class="text">Presupuesto</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
     <!--slogan de servicios-->
-    <section>
+    <section class="prestaciones">
         <h2>
             Lo que usted quiere esta en sus manos, lo que necesita esta en las nuestras
         </h2>
     </section>
     <!--contenido-->
     <main>
-        <div>
-            <img src="../img/servicios-1.jpg" alt="exterminio">
-            <div>
-                <h3>Exterminio de hordas</h3>
-                <p>Precio base $65.000</p>
-                <a href="#"><img src="../img/Cash-min.png" alt="pagar"></a>
+        <div class="servicio__card">
+            <img class="servicio__img" src="../img/servicios-1.jpg" alt="exterminio">
+            <div class="servicio__info">
+                <h3 class="servicio__articulo">Exterminio de hordas</h3>
+                <p class="servicio__precio">Precio base $65.000</p>
+                <a href="./usuario.html">Contratar</a>
             </div>
-            <p>Elimine con seguridad las hordas que se dirigen hacia su posicion, nuestros especialistas planificaran y prepararan el mejor terreno para eliminar la amenaza sin que usted sufra ningun daño.</p>
+            <p class="servicio__texto">Elimine con seguridad las hordas que se dirigen hacia su posicion, nuestros especialistas planificaran y prepararan el mejor terreno para eliminar la amenaza sin que usted sufra ningun daño.</p>
         </div>
-        <div>
-            <img src="../img/servicios-3.jpg" alt="saqueos">
-            <div>
-                <h3>Saqueos</h3>
-                <p>30% del botin</p>
-                <a href="#"><img src="../img/Cash-min.png" alt="pagar"></a>
+        <div class="servicio__card servicio__card--fondo">
+            <img class="servicio__img" src="../img/servicios-3.jpg" alt="saqueos">
+            <div class="servicio__info">
+                <h3 class="servicio__articulo">Saqueos</h3>
+                <p class="servicio__precio">30% del botin</p>
+                <a href="usuario.html">Contratar</a>
             </div>
-            <p>Sigilosos, incriminadores, violentos o como usted necesite, nuestra cooperativa tiene basta experiencia en saqueos a sitios infectados u ocupados por otros supervivientes. Para cada estilo de saqueo tenemos las propuestas acordes.</p>
+            <p class="servicio__texto">Sigilosos, incriminadores, violentos o como usted necesite, nuestra cooperativa tiene basta experiencia en saqueos a sitios infectados u ocupados por otros supervivientes. Para cada estilo de saqueo tenemos las propuestas acordes.</p>
         </div>
-        <div>
-            <img src="../img/servicios-4.jpg" alt="encargo">
-            <div>
-                <h3>Objetivos por encargo</h3>
-                <p>Precio base de $30.000</p>
-                <a href="#"><img src="../img/Cash-min.png" alt="pagar"></a>
+        <div class="servicio__card">
+            <img class="servicio__img" src="../img/servicios-4.jpg" alt="encargo">
+            <div class="servicio__info">
+                <h3 class="servicio__articulo">Objetivos por encargo</h3>
+                <p class="servicio__precio">Precio base de $30.000</p>
+                <a href="usuario.html">Contratar</a>
             </div>
-            <p>Tenemos especialistas idoneos que pueden encargarse de los objetivos especificos. Necesita un asesinato que genere conflicto entre otros grupos o simplemente desea encargarse de algo personal, tenemos el servicio adecuado.</p>
+            <p class="servicio__texto">Tenemos especialistas idoneos que pueden encargarse de los objetivos especificos. Necesita un asesinato que genere conflicto entre otros grupos o simplemente desea encargarse de algo personal, tenemos el servicio adecuado.</p>
         </div>
-        <div>
-            <img src="../img/servicios-5.jpg" alt="defensa">
-            <div>
-                <h3>Servicio de proteccion y defensa</h3>
-                <p>Precio a convenir en el lugar</p>
-                <a href="#"><img src="../img/Cash-min.png" alt="pagar"></a>
+        <div class="servicio__card">
+            <img class="servicio__img" src="../img/servicios-5.png" alt="defensa">
+            <div class="servicio__info">
+                <h3 class="servicio__articulo">Servicio de proteccion y defensa</h3>
+                <p class="servicio__precio">Precio base $70.000</p>
+                <a href="usuario.html">Contratar</a>
             </div>
-            <p>Todos tenemos algo que proteger en este contexto apocaliptico. Nosotros tenemos las herramientas y el conocimiento adecuado para que eso pueda suceder. con el presupuesto acorde tendra el escudo acorde.</p>
+            <p class="servicio__texto">Todos tenemos algo que proteger en este contexto apocaliptico. Nosotros tenemos las herramientas y el conocimiento adecuado para que eso pueda suceder. con el presupuesto acorde tendra el escudo acorde.</p>
         </div>
-        <div>
-            <img src="../img/servicios-6.jpg" alt="limpieza">
-            <div>
-                <h3>Eliminacion y limpieza de zonas infectadas</h3>
-                <p>$45.000</p>
-                <a href="#"><img src="../img/Cash-min.png" alt="pagar"></a>
+        <div class="servicio__card servicio__card--fondo">
+            <img class="servicio__img" src="../img/servicios-6.png" alt="limpieza">
+            <div class="servicio__info">
+                <h3 class="servicio__articulo">Eliminacion y limpieza de zonas infectadas</h3>
+                <p class="servicio__precio">$45.000</p>
+                <a href="usuario.html">Contratar</a>
             </div>
-            <p>Los cuerpo repartidos en las cercanias son grandes focos de enfermedades que pueden afectar gravemente a su poblacion y pueden atraer a mas infectados. nosotros tenemos los recursos y la logistica para hacerlo por usted o para liberar y limpiar una zona especifica que usted necesite.</p>
+            <p class="servicio__texto">Los cuerpo repartidos en las cercanias son grandes focos de enfermedades que pueden afectar gravemente a su poblacion y pueden atraer a mas infectados. nosotros tenemos los recursos y la logistica para hacerlo por usted o para liberar y limpiar una zona especifica que usted necesite.</p>
         </div>
-        <div>
-            <img src="../img/servicios-7.jpg" alt="">
-            <div>
-                <h3>Construccion y reformas de refugios y aldeas</h3>
-                <p>30% de los materiales</p>
-                <a href="#"><img src="../img/Cash-min.png" alt="pagar"></a>
+        <div class="servicio__card">
+            <img class="servicio__img" src="../img/servicios-7.jpg" alt="">
+            <div class="servicio__info">
+                <h3 class="servicio__articulo">Construccion y reformas de refugios y aldeas</h3>
+                <p class="servicio__precio">30% de los materiales</p>
+                <a href="usuario.html">Contratar</a>
             </div>
-            <p>Un sitio segur se ha vuelto una de las cosas escenciales para la supervivencia. Si desea asentarse y carece de mano de obra, Pixies Mercenary cuenta con un equipo altamente calificado para construir velozmente y con calidad el diseño que usted tenga en mente. Asi mismo tenemos experiencia tecnica y teorica para el refuerzo y reforma de construcciones ya existentes</p>
+            <p class="servicio__texto">Un sitio segur se ha vuelto una de las cosas escenciales para la supervivencia. Si desea asentarse y carece de mano de obra, Pixies Mercenary cuenta con un equipo altamente calificado para construir velozmente y con calidad el diseño que usted tenga en mente. Asi mismo tenemos experiencia tecnica y teorica para el refuerzo y reforma de construcciones ya existentes</p>
         </div>
         <!--servicio de delivery-->
-        <article>
-                <div>
-                    <imgoduct__img" src="../img/delivery-min.png" alt="delivery" style="width:100%">
-                    <div>
-                        <h3>Delivery</h3>
-                        <p>$100,00 cada 100mts</p>
-                        <p>entrega en la puerta de tu refugio</p>
-                        <button><a href="#"><img src="../img/Cash-min.png" alt=""></a></button>
+        <article class="delivery">
+                <div class="delivery__card">
+                    <div class="delivery__imgbox"><img class="delivery__img" src="../img/delivery-min.png" alt="delivery"></div>
+                    <div class="delivery__info">
+                        <h3 class="delivery__nombre">Delivery</h3>
+                        <p class="delivery__precio">$100,00 cada 100mts</p>
+                        <p class="delivery__texto">entrega en la puerta de tu refugio</p>
                     </div>
+                    <button class="delivery__boton"><span class="delivery__boton--texto">Pida su pibe de los mandados</span><a href="#"><img src="../img/Cash-min.png" alt=""></a></button>
                 </div>
             </article>
         </section>
@@ -112,7 +140,7 @@
     <!--footer-->
     <footer class="pie">
         <!--logo enlace index-->
-        <a href="index.html" class="logoFooter"><img src="./img/logo.png" alt="logo-index" class="logoFooter__img"></a>
+        <a href="../index.html" class="logoFooter"><img src="../img/logo.png" alt="logo-index" class="logoFooter__img"></a>
         <!--datos de la empresa-->
         <address>
             Oficinas: Al norte de la ciudad <br>
@@ -120,10 +148,10 @@
             E-mail: Pixies.coop@apocalipmail.zom 
         </address>
         <div class="menuFooter">
-            <a href="./views/productos.html">Productos</a>
-            <a href="./views/servicios.html">Servicios</a>
-            <a href="./views/especialistas.html">Especialista</a>
-            <a href="./views/usuario.html">Usuario</a>
+            <a href="../index.html">Servicios</a>
+            <a href="productos.html">Productos</a>
+            <a href="especialistas.html">Especialista</a>
+            <a href="usuario.html">Usuario</a>
         </div>
         <p class=" pie__texto">© Copyright derechos reservados por Cooperativa Pixies Mercenary<a href="#index" class="pie__enlace">Subir</a></p>
     </footer>

@@ -11,81 +11,94 @@
     <!--css-->
     <link rel="stylesheet" href="../css/estil.css">
     <!--SEO-->
-    <meta name="keywords" content="zombies, supervivencia, comunidad, comercio, ">
+    <meta name="keywords" content="zombies, supervivencia, presupuesto, mercenario,trabajo,encargo">
 <title>Inicio de sesion y registro</title>
-<meta name="description" content="Se parte de la comunidad de G.A.Z para aprovechar todos los beneficios y mantener a tu acance toda la informacion necesaria para sobrevivir ">
+<meta name="description" content="Presupuestos de objetivos, atendemos encargos desde escolta, rescate o ataque a un objetivo especifico">
 </head>
 <body>
     <header class="cabeza">
         <!--logo-enlace a index-->
-        <a href="index.html" class="logo"><img src="./img/Logo.png" alt="logo" class="logo__img"></a>
+        <a href="../index.html" class="logo"><img src="../img/Logo.png" alt="logo" class="logo__img"></a>
         <!--Nombre de Empresa-->
         <h1 class="cabeza__h1" id="index">Pixies</h1>
         <!--Menu navegacion-->
         <nav class="menu">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./views/productos.html">Productos</a></li>
-                <li><a href="./views/servicios.html">Servicios</a></li>
-                <li><a href="./views/especialistas.html">Especialistas</a></li>
+            <ul class="menu__list">
+                <li><a href="../index.html">
+                    <span class="text">Inicio</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                    </a>
+                </li>
+                <li><a href="productos.html">
+                    <span class="text">Productos</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                    </a>
+                </li>
+                <li><a href="servicios.html">
+                    <span class="text">Servicios</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                    </a>
+                </li>
+                <li><a href="especialistas.html">
+                    <span class="text">Especialistas</span>
+                    <span class="line -right"></span>
+                    <span class="line -top"></span>
+                    <span class="line -left"></span>
+                    <span class="line -bottom"></span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 <body>
-    <main>
-        <section>
-            <h2>Ingresa a nuestra comunidad y aprovecha todos los beneficios, ofertas y novedades que Cooperativa Pixies Mercenary tiene para ofrecer</h2>
-        </section>
-        <!--inicio de sesion-->
-        <section>
-            <form action="" method="GET" enctype="">
-                <fieldset class="signUp">
-                    <input type="text" name=usuario placeholder="Nombre de usuario"><br>
-                    <input type="password" name="contraseña" placeholder="Introduzca la contraseña"><br>
-                    <input type="submit" value="Iniciar sesion" class="signUps"><br>
-                    <a href="questions.html">Olvidaste tu Contraseña?</a><br>
-                    <a href="#reg">Crear Cuenta</a>
-                </fieldset>
-        </section>
-            <!--formulario de registro-->
-            <section>
-                <h2>Crea tu cuenta libre de mordidas</h2>
-            </section>
-            <section>
-                <form action="" method="GET" enctype="">
-                    <fieldset>
-                    <legend>Datos de cuenta</legend>
-                        <label for="nombre">Nombre de Usuario</label>
+    <main>        
+        <article class="presupuesto__intro">
+            <h2>Hace el pedido, especifica las caracteristicas y en la brevedad nos comunicaremos con un presupuesto aproximado para empezar las negociaciones</h2>
+        </article>
+        <!--FORMULARIO DE PRESUPUESTO-->
+        <section class="presupuesto">
+            <form class="presupuesto__formulario" action="" method="GET" enctype="">
+                <fieldset>
+                    <legend>Formulario de Presupuesto</legend>
+                        <label for="nombre">Coloque su alias como contratante</label><br>
                         <input type="text" name=nombre><br>
-                        <label for="edad">Edad</label>
-                        <input type="text" name=edad>
-                        <label for="email">Correo electronico</label>
-                        <input type="email" name=email><br>
-                        <label for="password">Contraseña</label>
-                        <input type="password" name=password><br>
-                        <label for="password1"> Confirma contraseña</label>
-                        <input type="password" name=password1><br>
-                    </fieldset>
-                <fieldset>
-                    <legend>Datos extra</legend>
-                    <div>solitario</div>
-                        <input type="radio" name=survivor value="S"/>
-                    <div>grupo</div>
-                        <input type="radio" name=survivor value="G"/>
-                    <div>comunidad</div>
-                        <input type="radio" name=survivor value="C"/>
-                <fieldset>
-                    <div><a href="terminos.html">Acepta los Terminos y condiciones</a></div>
-                    <input type="checkbox" name="acepta"value="1"/></fieldset><br>
-                    <input class="botonRegistro" type="submit" value="Registrarse">
-            </fieldset>
+                        <label for="contacto">Coloque via de contacto(telefono, mail, direccion,etc) </label>
+                        <input type="text" name="contacto">
+                        <label for="pedido">Defina el objetivo</label><br>
+                        <textarea name="pedido" id="" cols="30" rows="15"></textarea><br>
+                        <label for="info">Describa lo mejor posible el objetivo</label><br>
+                        <textarea name="info" id="" cols="30" rows="15"></textarea><br>
+                        <label for="lugar">Ubicacion (en caso de no saberlo, adicionaremos tarifa de rastreo)</label><br>
+                        <input type="text" name="pedido"><br>
+                    <legend>Existe objetivo secundario?</legend>
+                            <div>SI</div>
+                            <input type="radio" name=survivor value="si"/>
+                            <div>NO</div>
+                            <input type="radio" name=survivor value="no"/>
+                        <label for="objetivo-sec">Especifique</label>
+                        <textarea name="objetivo-sec" id="" cols="30" rows="15"></textarea>                        
+                </fieldset>                    
+                <fieldset class="terminos">
+                    <div><a class="terminos__texto" href="terminos.html">Acepta los Terminos y condiciones</a></div>
+                    <input type="checkbox" name="acepta"value="1"/>
+                </fieldset><br>
+                    <input class="presupuesto__boton" type="submit" value="Solicitar">
             </form>
         </section>
     </main>
     <!--footer-->
     <footer class="pie">
         <!--logo enlace index-->
-        <a href="index.html" class="logoFooter"><img src="./img/logo.png" alt="logo-index" class="logoFooter__img"></a>
+        <a href="../index.html" class="logoFooter"><img src="../img/logo.png" alt="logo-index" class="logoFooter__img"></a>
         <!--datos de la empresa-->
         <address>
             Oficinas: Al norte de la ciudad <br>
@@ -93,10 +106,10 @@
             E-mail: Pixies.coop@apocalipmail.zom 
         </address>
         <div class="menuFooter">
-            <a href="./views/productos.html">Productos</a>
-            <a href="./views/servicios.html">Servicios</a>
-            <a href="./views/especialistas.html">Especialista</a>
-            <a href="./views/usuario.html">Usuario</a>
+            <a href="../index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="especialistas.html">Especialista</a>
         </div>
         <p class=" pie__texto">© Copyright derechos reservados por Cooperativa Pixies Mercenary<a href="#index" class="pie__enlace">Subir</a></p>
     </footer>
