@@ -7,7 +7,7 @@
 $color0: #0a4407;
 $color1:#ccd60e;
 $color2: white;
-$texto:proxima-nova, monospace;  
+$texto:proxima-nova, monospace;
 $texto2:"Saira Stencil One", cursive;
 $borde: solid 3px $color0;
 $borde2: solid 3px $color1;
@@ -16,8 +16,9 @@ $borde2: solid 3px $color1;
 /*ESTILOS GENERALES*/
 body{
     background: $color0;
-    background-size: cover;
     max-width: 100%;
+    height: 100vh;
+    margin: 0;
 }
 //HEADER
 .cabeza{
@@ -32,12 +33,9 @@ body{
     ;
     //LOGO
     .logo{
-        display: flex;
-        align-content: center;
-        justify-content: center;
         width: min-content;
-        grid-area: logo;
         .logo__img{
+            grid-area: logo;
             position: relative;
             left: 8px;
         }
@@ -80,13 +78,13 @@ body{
                     text-transform: uppercase;
                     text-decoration: none;
                     font-size: 14px;
-                    cursor: pointer;                
-                    .text {                      
+                    cursor: pointer;
+                    .text {
                       font-family: $texto;
                       transform: translate3d(0,12px,0);
                       display: block;
                       transition: transform 0.4s cubic-bezier(.2,0,0,1) 0.4s;
-                    }                
+                    }
                     &:after {
                       position: absolute;
                       content: '';
@@ -99,53 +97,53 @@ body{
                         right 0.2s cubic-bezier(.04,.48,0,1) 0.6s,
                         left 0.4s cubic-bezier(.04,.48,0,1) 0.6s;
                       transform-origin: left;
-                    }                
-                }                
+                    }
+                }
                     .line {
                         position: absolute;
-                        background: $color2;                
+                        background: $color2;
                         &.-right,
                         &.-left {
                         width: 3px;
                         bottom: -3px;
                         top: -3px;
                         transform: scale3d(1,0,1);
-                    }                
+                    }
                     &.-top,
                     &.-bottom {
                       height: 3px;
                       left: -3px;
                       right: -3px;
                       transform: scale3d(0,1,1);
-                    }                
+                    }
                     &.-right {
                       right: -3px;
                       transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.23s;
                       transform-origin: top;
-                    }                
+                    }
                     &.-top {
                       top: -3px;
                       transition: transform 0.08s linear 0.43s;
                       transform-origin: left;
-                    }                
+                    }
                     &.-left {
                       left: -3px;
                       transition: transform 0.08s linear 0.51s;
                       transform-origin: bottom;
-                    }                
+                    }
                     &.-bottom {
                       bottom: -3px;
                       transition: transform 0.3s cubic-bezier(1,0,.65,1.01);
                       transform-origin: right;
-                    }  
-                  }                
+                    }
+                  }
                     a:hover,
                     a:active {
-                
+
                     .text {
                         transform: translate3d(0,0,0);
                         transition: transform 0.6s cubic-bezier(.2,0,0,1) 0.4s;
-                    }                
+                    }
                     &:after {
                         transform: scale3d(0,1,1);
                         right: -3px;
@@ -154,25 +152,25 @@ body{
                         transition:transform 0.2s cubic-bezier(1,0,.65,1.01) 0.17s,
                         right 0.2s cubic-bezier(1,0,.65,1.01),
                         left 0s 0.3s;
-                    }                
+                    }
                     .line {
-                        transform: scale3d(1,1,1);                
+                        transform: scale3d(1,1,1);
                         &.-right {
                             transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.2s;
                             transform-origin: bottom;
-                        }                
+                        }
                         &.-top {
                             transition: transform 0.08s linear 0.4s;
                             transform-origin: right;
-                        }                
+                        }
                         &.-left {
                             transition: transform 0.08s linear 0.48s;
                             transform-origin: top;
-                        }                
+                        }
                         &.-bottom {
                             transition: transform 0.5s cubic-bezier(0,.53,.29,1) 0.56s;
                             transform-origin: left;
-                        }                                   
+                        }
                     }
                 }
             }
@@ -186,7 +184,7 @@ body{
     display: grid;
     grid-template-areas:
     "logof datos menuf"
-    "redes datos menuf"
+    "logof datos menuf"
     "texto texto texto"
     ;
     grid-template-columns: 1fr 2fr 2fr;
@@ -196,7 +194,7 @@ body{
         grid-area: logof;
         margin-top: 30px;
         transform: translateX(10px);
-    }        
+    }
     address{
         grid-area: datos;
         display: block;
@@ -210,7 +208,7 @@ body{
         display: flex;
         flex-direction: column;
         transform: translateX(20%);
-        font-family: $texto;        
+        font-family: $texto;
         text-transform: uppercase;
         width: min-content;
         a{
@@ -230,74 +228,75 @@ body{
     }
 }
 /*ESTILOS INDEX*/
+//imagen de presentacion
 .intro{
     max-width: 100%;
-    height: auto;
-    position: relative;
-    .intro__img{
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-    .intro__texto{
-        position:absolute;
-        width: 80%;
-        height: auto;
-        color: $color0;
-        font-family: $texto2;
-        .intro__h2{            
-            transform: translateY(-450px)translateX(20%);
-            font-size: 1.8rem;
+    height: 75vh;
+    background: url(../img/fondo.png);
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 10px;
+        .intro__h2{
+            width: fit-content;
+            font-size: 1.7rem;
+            font-family: $texto2;
+            color: $color2;
+            text-align: center
         }
         .intro__h3{
-            transform: translateY(-120px)translateX(50%);
+            @extend.intro__h2;
+            color: $color1;
+            margin-left: 20px;
         }
-    }
 }
+//texto introductorio
 .introTexto{
     max-width: 100%;
     height: 500px;
-    padding: 35px;
-    margin: auto;
     display: flex;
     flex-direction: column;
     background-color: $color0;
+    justify-content: center;
+    align-items: center;
     &::before{
-        content: "";
-        background-color: $color1;
-        max-width: 100%;
+        content:"";
+        background-color:$color1;
+        width: 100%;
         height: 100px;
-        position: absolute;
-        left:0;
-        transform: translateY(-35px);
-        clip-path: polygon(0 0,100% 0,100% 0,0 100%,);
+        position: relative;
+        top: 0;
+        clip-path: polygon(0 0,100% 0, 100% 0,0 100%);
     }
     &::after{
-        content: "";
+        content:"";
         background-color: $color1;
-        max-width: 100%;
+        width: 100%;
         height: 100px;
-        position: absolute;
-        left: 0;
-        transform: translateY(365px);
+        position: relative;
+        bottom: 0px;
         clip-path: polygon(0 100%,100% 0,100% 100%,0 100%);
     }
     p{
         font-family: $texto;
         font-size: 1.2rem;
-        margin: auto;
         align-content: center;
         color: $color2;
+        padding: 20px;
         span{
             text-transform: uppercase;
         }
     }
 }
+//enlace presupuesto
 .muestra{
     background-color: $color1;
     max-width: 100%;
-    height: auto;
-    display: grid;
+    height: 600px;
+    margin-bottom: -1px;
+    display: flex;
+    flex-direction: column;
     .muestra__caja{
         width: 90%;
         height: 500px;
@@ -340,6 +339,7 @@ body{
         }
     }
 }
+//introdducion enlace preoductos y servicios
 .intro--b{
     background-color: $color1;
     max-width: 100%;
@@ -350,10 +350,10 @@ body{
         font-size: 30px;
         color: $color0;
         padding: 30px;
-        border-top: $borde;
        
     }
 }
+//enlace productos y servicios
 .venta{
     background-color: $color0;
     max-width: 100%;
@@ -381,9 +381,10 @@ body{
             position: absolute;
             transform: translateY(50px);
             margin-left: 20px;
-        }     
+        }
     }
 }
+//introduccion enlace especialistas
 .intro--c{
     background-color: $color0;
     max-width: 100%;
@@ -401,9 +402,10 @@ body{
         font-size: 30px;
         color: $color1;
         padding: 20px;
-        width: 80%;        
+        width: 80%;
     }
 }
+//enlace especialista
 .especialistas{
     max-width: 100%;
     height: 800px;
@@ -414,7 +416,7 @@ body{
         border: $borde;
         border-radius: 20px;
         margin-left: 20px;
-        img{
+        .especialistas__img{
             width: 90%;
             margin-top: 20px;
             margin-left: 20px;
@@ -431,7 +433,7 @@ body{
                 font-family: $texto2;
                 color: $color0;
                 text-transform: uppercase;
-                text-align: center;                
+                text-align: center;
             }
             .especialistas__texto{
                 font-family: $texto;
@@ -440,7 +442,7 @@ body{
             }
             .especialistas__boton{
                 width: min-content;
-                background-color: $color0;    
+                background-color: $color0;
                 border-radius: 25px;
                 margin-left: 20px;
                 a{
@@ -455,6 +457,7 @@ body{
         }
     }
 }
+//introduccion experiencia clientes
 .intro--d{
     max-width: 100%;
     background-color: $color1;
@@ -473,13 +476,17 @@ body{
         font-size: 32px;
         color: $color0;
         padding: 10px;
-        width: 90%;        
+        width: 90%;
     }
 }
+//clientes
 .cliente{
     max-width: 100%;
     background-color: $color0;
     margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .cliente__card{
         width: 90%;
         height: 180px;
@@ -496,6 +503,10 @@ body{
         }
         .cliente__info{
             margin-left: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             .cliente__nombre{
                 font-family: $texto2;
                 color: $color0;
@@ -513,7 +524,7 @@ body{
                 color: $color0;
                 font-size: 12px;
                 padding: 10px;
-            
+
             }
         }
     }
@@ -521,21 +532,22 @@ body{
 /*ESPECIFICO PRODUCTO.HTML*/
 .presentacion{
     max-width: 100%;
-    height: auto;
+    height: 400px;
     background-color: $color1;
-    img{
-        width: 100%;        
-    }
+    background-image: url(../img/fondo1.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
     h2{
-        font-size: 36px;
-        font-family: $texto2;
-        letter-spacing: 2px;
+        font-size: 30px;
+        font-family: $texto;
         color: $color1;
-        position: absolute;
-        top: 150px;
-        left: 75px;
+        text-align: center;
+        position: relative  ;
+        top: 15px;
     }
 }
+// introduccion a los productos
 .intro__productos{
     max-width: 100%;
     height: 250px;
@@ -552,6 +564,10 @@ body{
 //CARTAS DE PRODUCTOS
 .venta__producto, .venta__vehiculo{
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     .venta__card{
         display: flex;
         flex-direction: row;
@@ -574,6 +590,9 @@ body{
             height: 100%;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
             .venta__articulo{
                 font-family: $texto2;
                 color: $color0;
@@ -587,9 +606,7 @@ body{
             .venta__boton{
                 background-color: $color0;
                 width: min-content;
-                border-radius: 20px;
-                position: absolute;
-                transform: translateY(250px)translateX(60px);
+                border-radius: 20px;                
                 img{
                     width: 100px;
                 }
@@ -597,17 +614,24 @@ body{
         }
     }
 }
+//introduccion a trajetas vehiculos
 .intro__vehiculos{
     background-color: $color1;
     max-width: 100%;
+    height: 200px;
+    padding: 10px;
+    clip-path: polygon(0 0,100% 0,0 100%);
     h2{
+        text-align: justify;
         font-family: $texto2;
-        margin-bottom: 20px;
+        padding: 20px;
     }
 }
 /*ESPECIFICO SERVICIOS*/
+//introduccion
 .prestaciones{
     max-width: 100%;
+    padding: 10px;
     h2{
         margin-top: 40px;
         font-family: $texto2;
@@ -615,14 +639,18 @@ body{
         font-size: 32px;
     }
 }
-main{
+//tarjetas de servicios
+.main-servicios{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .servicio__card{
         width: 90%;
         border: $borde2;
         border-radius: 20px;
         padding: 10px;
-        margin-left: 20px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         display: grid;
         grid-template-areas:
         "img texto"
@@ -665,6 +693,9 @@ main{
 }
 .delivery{
     max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .delivery__card{
         width: 90%;
         height: fit-content;
@@ -704,25 +735,27 @@ main{
             }
             .delivery__texto{
                 font-family: $texto;
-                color: $color1;    
+                color: $color1;
             }
         }
         .delivery__boton{
-            grid-area: boton;
-            width: fit-content;
-            border-radius: 20px;
+            width: 200px;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            
+            color: $color0;
             background-color: $color1;
-            display: flex;
-            justify-content: space-between;
-            box-shadow: 3px 3px 15px darken($color: #0a4407, $amount: 2);
-            transform: translateX(100px);
-            .delivery__boton--texto{
-                color: $color0;
-                font-family: $texto2;
-                text-transform: uppercase;
-                text-align: center;
-                justify-content: center;
+            border-radius: 15px;
+            box-shadow: 0 5px #ccd60eb8;
+            &:hover{
+                background-color: yellow;
             }
+            &:active{
+                background-color: $color2;
+                box-shadow: 0 2px lightgrey;
+                transform: translateY(4px);
+            }            
         }
     }
 }
@@ -736,7 +769,7 @@ main{
     &::after{
         content:"";
         display: block;
-        background-color: $color1;    
+        background-color: $color1;
         width: 100px;
         height: 100px;
         position: absolute;
@@ -757,7 +790,7 @@ main{
 }
 .presupuesto__formulario{
     padding: 10px;
-    fieldset{    
+    fieldset{
         display: grid;
         align-items: center;
         justify-items: center;
@@ -798,7 +831,7 @@ main{
     margin-top: 20px;
     .terminos__texto{
         text-align: center;
-        color: $color1;        
+        color: $color1;
     }
 }
 .presupuesto__boton{
@@ -831,14 +864,14 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     .card-especialista{
         width: 250px;
         height: 350px;
         position: relative;
         margin-bottom: 30px;
         border-radius: 20px;
-        
+
         .tarjeta{
             height: 100%;
             width: 100%;
@@ -850,13 +883,13 @@ main{
             position: absolute;
             backface-visibility: hidden;
             transition: 1s;
-            
+
         }
         .frente{
             background-image: radial-gradient($color1, $color2);
-            transform: perspective(500px) rotateY(0deg);  
+            transform: perspective(500px) rotateY(0deg);
             .img-especialista{
-                width: 100px;        
+                width: 100px;
             }
             .especialista-nombre{
                 font-family: $texto2;
@@ -887,10 +920,10 @@ main{
             }
         }
     }
-    .card-especialista:hover .frente{        
+    .card-especialista:hover .frente{
             transform: perspective(500px) rotateY(180deg);
     }
-    .card-especialista:hover .atras{        
+    .card-especialista:hover .atras{
         transform: perspective(500px) rotateY(360deg);
     }
 }
@@ -920,6 +953,521 @@ main{
     }
 }
 //MEDIA QUERIES
-@media screen {
+@media only screen and (min-width: 1024px){
+    
+    //ESTILOS GENERALES
+    //Header
+    .cabeza{
+        display: grid;
+        height:150px ;
+        grid-template-areas:
+        "logo titulo titulo"
+        "logo men men"
+        ;
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 5px;
+        align-items: center;
+        justify-content: center;
+        .logo{
+            transform: scale(1.8) translateX(50px) translateY(25px);
+        }
+        .cabeza__h1{
+            font-size: 3rem;
+            text-decoration: underline;
+        }
+        .menu{
+            transform: translateY(20px);
+            .text{
+                font-size: 30px;
+            }
+        }
+
+    }
+    //footer
+   .pie{
+       display: grid;
+       grid-template-columns: repeat(1fr);
+       justify-content: center;
+       align-items: center;
+       .logoFooter{
+           transform: scale(1.6) translateX(80px);
+       }
+   }
+   address{
+       transform: scale(1.4);
+       margin-left: 20px;
+   }
+   .menuFooter{
+       justify-self: center;
+    }
+   //INDEX
+   //imagen presentacion
+    .intro{
+       max-width: 100%;
+       height:200vh;
+       background-size: cover;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       align-items: center;
+        .intro__h2{
+           font-size: 5rem;
+           margin-top: 30px;
+           color: $color0;
+        }
+        .intro__h3{
+            margin-bottom: 50px;
+            color: $color1;
+        }
+    }
+    //inreoduccion enlace presupuesto
+    .introTexto{
+        max-width: 100%;
+        height: 100vh;
+        &::before{
+            width: 100%;
+            height: 200px;
+            position: relative;
+            top: 0;
+        }
+        p{
+            font-size: 2rem;
+            color: $color1;
+            padding: 30px;
+            text-align: justify;
+            span{
+                color: $color2;
+            }
+        }
+    }
+    //enlace presupuesto
+    .muestra{
+        height: 100vh;
+        .muestra__caja{
+            width: 90%;
+            height: auto;
+            border-radius: 20px;
+            display: grid;
+            grid-template-areas:
+            "img info"
+            "img enlace"
+            ;
+            background-image: radial-gradient($color2 ,$color1);
+            .muestra__img{
+                width: 100%;
+                border-radius: 20px;
+                grid-area: img;
+                border: $borde;
+            }
+            .muestra__info{
+                grid-area: info;
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .muestra__enlace{
+                grid-area: enlace;
+                width: 200px;
+                height: 70px;
+                justify-self: center;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;         
+            }
+        }
+    }
+    //introduccion enlace productos y servicios
+    .intro--b{
+        max-width: 100%;
+        height: 350px;
+        .b--h2{
+            font-size: 3.5rem;
+            text-align: center;
+        }
+    }
+    //enlace productos y servicios
+    .venta{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .servicios, .productos{
+            width: 45%;
+            height: auto;
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 100%;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    //introduccion enlace especialistas
+    .intro--c{
+        width: 100%;
+        height: 300px;
+        &::before{
+            height: 300px;
+        }
+        .c--h2{
+            font-size: 3rem;
+        }
+    }
+    //enlace especialistas
+    .especialistas{
+        max-width: 100%;
+        height: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .especialistas__card{
+            width: 90%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color0;
+            border: $color2 3ps solid;
+            .especialistas__img{
+                width: 50%;
+                border: $borde2;
+                margin-bottom: 20px;
+            }
+            .especialistas__info{
+                width: 80%;
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                margin: 15px;
+                border: $borde2;
+                .especialistas__h2{
+                    color: $color1;
+                    text-decoration: underline;
+                }
+                .especialistas__texto{
+                    color: $color1;
+                    font-size: 20px;
+                }
+                .especialistas__boton{
+                    border: $borde2;
+                    &::before{
+                        content: "→";
+                        color: $color1;
+                    }
+                    &::after{
+                        content: "←";
+                        color: $color1;
+                    }
+                }
+            }
+        }       
+    }
+    //introduccion experiencia clientes
+    .intro--d{
+        max-width: 100%;
+        height: 500px;
+        &::after{
+            width: 100%;
+            height: 250px;
+            transform: translateY(50px);
+        }
+        .d--h2{
+            font-size: 3rem;
+            text-align: center;
+        }
+    }
+    //clientes
+    .cliente{
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        align-items: center;
+        justify-content: space-around;
+        .cliente__card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            width: 250px;
+            height: 500px;
+            .cliente__img{
+                width: 50%;
+                position: relative;
+                top: 15px;
+            }
+        }
+    }
+    //PRODUCTOS.HTML
+    //imagen de presentacion
+    .presentacion{
+        max-width: 100%;
+        height: 800px;
+        background-size: cover;
+        h2{
+            font-size: 3rem;
+            color: $color2;
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+        }
+    }
+    //introduccion a los productos
+    .intro__productos{
+        width: 100%;
+        height: 350px;
+        display: flex;
+        clip-path: polygon(0 0,100% 0,100% 50%,50% 100%,0 50%);
+        justify-content: space-around;
+        align-items: center;
+        h2{
+            font-size: 3rem;
+            margin-left: 30px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+    //Cartas de productos
+    
+    .venta__producto, .venta__vehiculo{
+            width: 90%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        .venta__card{
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+            height: 550px;
+            padding: 10px;
+            .venta__img{
+                width: 100%;
+                padding: 10px;
+            }
+            .venta__info{
+                width: 90%;
+                height: 90%;
+                display: flex;
+                flex-direction:column;
+                
+                align-items: center;
+                .venta__articulo{
+                    font-size: 1.5rem;
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                .venta__precio{
+                    font-weight: 600;
+                    margin-bottom: 30px;
+                }
+                .venta__boton{
+                    position: relative;
+                    bottom: 20px;
+                    :hover{
+                        background-color: $color1;
+                        border: $borde;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .intro__vehiculos{
+        max-width: 100%;
+        display: flex;
+        height: 300px;
+        clip-path:polygon(0 0,100% 0, 100% 50%, 50% 100%,0 50%);
+        align-items: center;
+        justify-content: center;
+        h2{
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 3rem;
+            color: $color0;
+        }
+    }
+    //ESPECIFICO SERVICIOS
+    //introduccion
+    .prestaciones{
+        max-width: 100%;
+        height: 500px;
+        background-color: $color1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        clip-path: polygon(0 0,100% 0,100% 50%,95% 75%,50% 100%,5% 75%,0 50%);
+        h2{
+            color: $color0;
+            text-align: center;
+            font-size: 4.3rem;
+        }
+    }
+    //tarjetas de servicios
+    .main-servicios{
+        .servicio__card{
+            width: 90%;
+            height: 600px;
+            margin-bottom: 50px;
+            padding: 20px;
+            border:none ;
+            position: relative;
+            border-top: 6px solid $color1;
+            display: grid;
+            grid-template-areas: 
+            "img texto"
+            "info info"
+            ;
+            .servicio__img{
+                grid-area: img;
+                width: 100%;
+            }
+            .servicio__info{
+                grid-area: info;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .servicio__articulo{
+                    font-size: 2.5rem;
+                }
+                .servicio__precio{
+                    font-size: 30px;
+                }
+                a{
+                  width: 600px;
+                  font-size: 26px;
+                  text-align: center;
+                  background-color: $color1;
+                  color: $color2;
+                  border-radius: 20px;
+                  &:hover{
+                    border: 5px solid $color2;
+                    color: $color0;
+                    background-image: radial-gradient($color2, $color1);  
+                  }  
+                }
+            }
+            .servicio__texto{
+                grid-area: texto;
+                font-size: 1.7rem;
+                text-align: justify;
+                padding: 20px;
+            }
+        }
+    }
+    .delivery{
+        margin:35px 0;
+        .delivery__card{
+            width: fit-content;
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            bottom: 150px;
+            right: 20px;
+            .delivery__imgbox{
+                height: 90%;
+                .delivery__img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .delivery__info{
+                height: 90%;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .delivery__nombre{
+                    font-size: 18px;
+                }
+                .delivery__precio{
+                    font-size: 11px;
+                }
+                .delivery__texto{
+                    font-size: 11px;
+                }
+            }
+            .delivery__boton{
+                width: 50px;
+                font-size: 12px;
+            }
+        }
+    }
+    //USUARIO
+    .presupuesto__intro{
+        h2{
+            font-size: 3rem;
+        }
+    }
+    .presupuesto{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .presupuesto__formulario{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            fieldset{
+                width: 100%;
+            }
+            .presupuesto__boton{
+                transform: none;
+            }
+        }
+    }
+    //TERMINOS Y CONDICIONES
+    .tyc{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h2{
+            font-family: $texto2;
+            color: $color1;
+            font-size: 3em;
+            text-align: center;
+            text-decoration: underline;
+            text-transform: uppercase;
+            margin: 50px 0;
+        }
+        p{
+            width: 75%;
+            font-family: $texto;
+            text-align: justify;
+            color: $color2;
+            font-size: 32px;
+            line-height: 1.5;
+            padding: 20px;
+            span{
+                font-weight: 600;
+                font-style: italic;
+                color: $color1;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+@media (min-width:600px) and (max-width:1023px){
     
 }
