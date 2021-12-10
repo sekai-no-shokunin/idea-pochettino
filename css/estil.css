@@ -176,7 +176,7 @@ body {
   max-width: 100%;
   height: 75vh;
   background: url(../img/fondo.png);
-  background-size: contain;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -306,14 +306,19 @@ body {
 .intro--c {
   background-color: #0a4407;
   max-width: 100%;
-  height: 250px; }
-  .intro--c::before {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .intro--c::after {
     content: "";
     width: 100%;
     height: 250px;
-    position: absolute;
+    position: relative;
+    bottom: -1px;
     background-color: #ccd60e;
-    clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%); }
+    clip-path: polygon(0 100%, 100% 0, 100% 100%); }
   .intro--c .c--h2 {
     font-family: "Saira Stencil One", cursive;
     font-size: 30px;
@@ -324,7 +329,10 @@ body {
 .especialistas {
   max-width: 100%;
   height: 800px;
-  background-color: #ccd60e; }
+  background-color: #ccd60e;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .especialistas .especialistas__card {
     width: 90%;
     height: 700px;
@@ -368,14 +376,18 @@ body {
 .intro--d {
   max-width: 100%;
   background-color: #ccd60e;
-  height: 400px; }
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
   .intro--d::after {
     content: "";
     width: 100%;
     height: 200px;
     background-color: #0a4407;
-    position: absolute;
-    transform: translateY(-57px);
+    position: relative;
+    bottom: -1px;
     clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%); }
   .intro--d .d--h2 {
     font-family: "Saira Stencil One", cursive;
@@ -393,13 +405,16 @@ body {
   align-items: center; }
   .cliente .cliente__card {
     width: 90%;
-    height: 180px;
+    height: 250px;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     background-color: whitesmoke;
     border: solid 3px #ccd60e;
     border-radius: 20px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    padding: 20px; }
     .cliente .cliente__card .cliente__img {
       border-radius: 50%;
       border: solid 3px #0a4407;
@@ -409,7 +424,8 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      padding: 20px; }
       .cliente .cliente__card .cliente__info .cliente__nombre {
         font-family: "Saira Stencil One", cursive;
         color: #0a4407;
@@ -780,7 +796,7 @@ body {
       color: #ccd60e;
       text-transform: uppercase; }
 
-@media only screen and (min-width: 1024px) {
+@media (min-width: 850px) {
   .cabeza {
     display: grid;
     height: 150px;
@@ -1167,4 +1183,624 @@ body {
         font-weight: 600;
         font-style: italic;
         color: #ccd60e;
-        text-transform: uppercase; } }
+        text-transform: uppercase; }
+  .intro-especialista {
+    max-width: 100%;
+    height: 300px;
+    background-image: linear-gradient(to bottom, #ccd60e, #0a4407);
+    margin-bottom: 50px; }
+    .intro-especialista h2 {
+      font-family: "Saira Stencil One", cursive;
+      color: white;
+      font-size: 3rem;
+      text-decoration: underline;
+      text-align: center;
+      padding: 10px; }
+  .contenedor-especialista {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center; }
+    .contenedor-especialista .card-especialista {
+      width: 500px;
+      height: 700px;
+      position: relative;
+      margin-bottom: 30px;
+      border-radius: 20px; }
+      .contenedor-especialista .card-especialista .tarjeta {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        position: absolute;
+        backface-visibility: hidden;
+        transition: 1s; }
+      .contenedor-especialista .card-especialista .frente {
+        background-image: radial-gradient(#ccd60e, white);
+        transform: perspective(500px) rotateY(0deg); }
+        .contenedor-especialista .card-especialista .frente .img-especialista {
+          width: 200px; }
+        .contenedor-especialista .card-especialista .frente .especialista-nombre {
+          font-family: "Saira Stencil One", cursive;
+          color: #0a4407;
+          text-align: center;
+          text-decoration: underline;
+          text-transform: uppercase;
+          margin-top: 30px; }
+      .contenedor-especialista .card-especialista .atras {
+        background-image: radial-gradient(#ccd60e, white);
+        transform: perspective(500px) rotateY(180deg); }
+        .contenedor-especialista .card-especialista .atras ul {
+          font-family: "Saira Stencil One", cursive;
+          text-align: center;
+          text-decoration: underline;
+          text-transform: uppercase;
+          color: #0a4407;
+          list-style: none; }
+          .contenedor-especialista .card-especialista .atras ul li {
+            font-family: proxima-nova, monospace;
+            text-align: center;
+            color: #0a4407;
+            margin-bottom: 25px;
+            margin-top: 25px; }
+    .contenedor-especialista .card-especialista:hover .frente {
+      transform: perspective(500px) rotateY(180deg); }
+    .contenedor-especialista .card-especialista:hover .atras {
+      transform: perspective(500px) rotateY(360deg); } }
+
+@media (min-width: 520px) and (max-width: 850px) {
+  .cabeza {
+    background-color: orange;
+    max-width: 100%;
+    height: 100px;
+    font-family: "Saira Stencil One", cursive;
+    display: grid;
+    grid-template-areas: "logo titulo titulo" "logo men men";
+    justify-content: center;
+    align-items: center; }
+    .cabeza .logo {
+      width: min-content; }
+      .cabeza .logo .logo__img {
+        transform: scale(1.3);
+        grid-area: logo;
+        margin-top: 10px; }
+    .cabeza .cabeza__h1 {
+      grid-area: titulo;
+      color: #0a4407;
+      text-align: center;
+      font-size: 24px;
+      justify-content: space-between; }
+      .cabeza .cabeza__h1::before {
+        content: "Cooperativa";
+        font-size: 20px;
+        margin-right: 10px; }
+      .cabeza .cabeza__h1::after {
+        content: "Mercenary";
+        font-size: 20px;
+        margin-left: 10px; }
+  .pie {
+    max-width: 100%;
+    height: 150px;
+    display: grid;
+    grid-template-areas: "logof datos menuf" "logof datos menuf" "texto texto texto";
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 1fr 2fr 2fr;
+    background-color: orange; }
+    .pie .logoFooter {
+      grid-area: logof;
+      margin-top: 30px;
+      transform: translateX(50px) scale(1.3); }
+    .pie address {
+      grid-area: datos;
+      display: block;
+      font-family: proxima-nova, monospace;
+      color: #0a4407;
+      font-size: 12px;
+      margin-top: 30px; }
+    .pie .menuFooter {
+      margin-top: 30px;
+      grid-area: menuf;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(20%);
+      font-family: proxima-nova, monospace;
+      text-transform: uppercase;
+      width: min-content; }
+      .pie .menuFooter a {
+        text-decoration: none;
+        width: min-content; }
+        .pie .menuFooter a:hover {
+          border: solid 3px #ccd60e;
+          color: grey; }
+    .pie .pie__texto {
+      grid-area: texto;
+      font-family: proxima-nova, monospace;
+      font-size: 12px;
+      text-align: center; }
+  /*ESTILOS INDEX*/
+  .intro {
+    max-width: 100%;
+    height: 110vh;
+    background: url(../img/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 10px; }
+    .intro .intro__h2, .intro .intro__h3 {
+      font-size: 2.5rem;
+      font-family: "Saira Stencil One", cursive;
+      color: orange;
+      text-align: center;
+      padding: 10px; }
+    .intro .intro__h3 {
+      color: #0a4407;
+      margin-right: 20px;
+      text-align: center; }
+  .introTexto {
+    max-width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: #0a4407;
+    justify-content: center;
+    align-items: center; }
+    .introTexto::before {
+      content: "";
+      background-color: orange;
+      width: 100%;
+      height: 110px;
+      position: relative;
+      top: 0;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 50%, 0 100%); }
+    .introTexto::after {
+      content: "";
+      background-color: orange;
+      width: 100%;
+      height: 110px;
+      position: relative;
+      bottom: -1px;
+      clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 100%, 0 100%); }
+    .introTexto p {
+      font-family: proxima-nova, monospace;
+      font-size: 1.2rem;
+      align-content: center;
+      color: grey;
+      padding: 20px; }
+      .introTexto p span {
+        text-transform: uppercase;
+        color: orange; }
+  .muestra {
+    background-color: orange;
+    max-width: 100%;
+    height: 700px;
+    margin-bottom: -1px;
+    display: flex;
+    flex-direction: column; }
+    .muestra .muestra__caja {
+      width: 90%;
+      height: 600px;
+      background-image: radial-gradient(grey, orange);
+      padding: 20px;
+      border: solid 3px #0a4407;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .muestra .muestra__caja .muestra__img {
+        width: 100%; }
+      .muestra .muestra__caja .muestra__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .muestra .muestra__caja .muestra__info h2 {
+          font-family: "Saira Stencil One", cursive;
+          font-size: 24px;
+          width: 90%;
+          color: #0a4407;
+          text-align: center;
+          border-bottom: solid 3px #0a4407;
+          margin-top: 20px; }
+        .muestra .muestra__caja .muestra__info p {
+          font-size: 20px;
+          font-family: proxima-nova, monospace;
+          color: #0a4407;
+          text-align: center;
+          margin-top: 30px;
+          width: 90; }
+      .muestra .muestra__caja .muestra__enlace {
+        width: 300px;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: "Saira Stencil One", cursive;
+        color: orange;
+        background-color: #0a4407;
+        border-radius: 20px; }
+        .muestra .muestra__caja .muestra__enlace :hover {
+          color: grey; }
+  .intro--b {
+    background-color: orange;
+    max-width: 100%;
+    height: 300px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 60%, 30% 60%, 0 100%); }
+    .intro--b .b--h2 {
+      font-family: "Saira Stencil One", cursive;
+      font-size: 2.7rem;
+      text-align: center;
+      color: #0a4407;
+      padding: 30px; }
+  .venta {
+    background-color: #0a4407;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .venta .servicios, .venta .productos {
+      width: 80%;
+      height: auto;
+      margin-bottom: 40px;
+      margin-left: 25px;
+      border: solid 3px #ccd60e;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      .venta .servicios img, .venta .productos img {
+        width: 100%; }
+      .venta .servicios h2, .venta .productos h2 {
+        color: orange;
+        font-family: "Saira Stencil One", cursive;
+        text-align: center;
+        position: absolute;
+        margin-left: 20px; }
+  .intro--c {
+    background-color: #0a4407;
+    max-width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .intro--c::after {
+      content: "";
+      width: 100%;
+      height: 300px;
+      position: relative;
+      bottom: -1px;
+      background-color: orange;
+      clip-path: polygon(0 60%, 30% 0%, 70% 0, 100% 60%, 100% 100%, 0 100%); }
+    .intro--c .c--h2 {
+      font-family: "Saira Stencil One", cursive;
+      font-size: 2.7rem;
+      text-align: center;
+      color: orange; }
+  .especialistas {
+    max-width: 100%;
+    height: 950px;
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .especialistas .especialistas__card {
+      width: 90%;
+      height: 850px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: solid 3px #0a4407;
+      border-radius: 20px; }
+      .especialistas .especialistas__card .especialistas__img {
+        width: 90%;
+        border-radius: 20px;
+        border: solid 3px #0a4407;
+        margin-bottom: 10px; }
+      .especialistas .especialistas__card .especialistas__info {
+        width: 90%;
+        padding: 5px;
+        border: solid 3px #0a4407;
+        border-radius: 20px; }
+        .especialistas .especialistas__card .especialistas__info .especialistas__h2 {
+          font-family: "Saira Stencil One", cursive;
+          color: #0a4407;
+          text-transform: uppercase;
+          text-align: center; }
+        .especialistas .especialistas__card .especialistas__info .especialistas__texto {
+          font-family: proxima-nova, monospace;
+          color: #0a4407;
+          text-align: center; }
+        .especialistas .especialistas__card .especialistas__info .especialistas__boton {
+          width: min-content;
+          background-color: #0a4407;
+          border-radius: 25px; }
+          .especialistas .especialistas__card .especialistas__info .especialistas__boton a {
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: "Saira Stencil One", cursive;
+            color: orange; }
+  .intro--d {
+    max-width: 100%;
+    background-color: orange;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .intro--d::after {
+      content: "";
+      width: 100%;
+      height: 300px;
+      background-color: #0a4407;
+      position: relative;
+      bottom: -1px;
+      clip-path: polygon(0 60%, 30% 0, 70% 0, 100% 60%, 100% 100%, 0 100%); }
+    .intro--d .d--h2 {
+      font-family: "Saira Stencil One", cursive;
+      font-size: 32px;
+      color: #0a4407;
+      padding: 10px;
+      text-align: center; }
+  .cliente {
+    max-width: 100%;
+    height: 1000px;
+    background-color: #0a4407;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .cliente .cliente__card {
+      width: 90%;
+      height: 180px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      background-color: grey;
+      border: solid 3px #ccd60e;
+      border-radius: 20px;
+      margin-bottom: 30px; }
+      .cliente .cliente__card .cliente__img {
+        border-radius: 50%;
+        border: solid 3px #0a4407;
+        padding: 20px; }
+      .cliente .cliente__card .cliente__info {
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+        .cliente .cliente__card .cliente__info .cliente__nombre {
+          font-family: "Saira Stencil One", cursive;
+          color: #0a4407;
+          text-decoration: underline;
+          font-size: 20px; }
+        .cliente .cliente__card .cliente__info .cliente__prestacion {
+          font-family: proxima-nova, monospace;
+          color: #0a4407;
+          font-size: 18px;
+          margin-bottom: 20px; }
+        .cliente .cliente__card .cliente__info .cliente__comentario {
+          font-family: proxima-nova, monospace;
+          color: #0a4407;
+          font-size: 12px;
+          padding: 10px; }
+  /*ESPECIFICO PRODUCTO.HTML*/
+  .presentacion {
+    max-width: 100%;
+    height: 500px;
+    background-color: orange;
+    background-image: url(../img/fondo1.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center; }
+    .presentacion h2 {
+      font-size: 30px;
+      font-family: proxima-nova, monospace;
+      color: orange;
+      text-align: center;
+      position: relative;
+      top: 35px; }
+  .intro__productos {
+    max-width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    background-color: orange;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 60%, 30% 60%, 0 100%); }
+    .intro__productos h2 {
+      width: 100%;
+      font-family: "Saira Stencil One", cursive;
+      font-size: 28px;
+      color: #0a4407;
+      text-align: center;
+      margin-top: 35px; }
+  .venta__producto, .venta__vehiculo {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .venta__producto .venta__card, .venta__vehiculo .venta__card {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 90%;
+      height: 400px;
+      margin-left: 10px;
+      margin-bottom: 30px;
+      background-color: orange;
+      border: solid 3px #0a4407;
+      border-radius: 20px; }
+      .venta__producto .venta__card .venta__img, .venta__vehiculo .venta__card .venta__img {
+        width: 200px;
+        margin-left: 20px; }
+      .venta__producto .venta__card img:hover, .venta__vehiculo .venta__card img:hover {
+        transform: rotate(359deg);
+        transition: 1s; }
+      .venta__producto .venta__card .venta__info, .venta__vehiculo .venta__card .venta__info {
+        width: 150px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px; }
+        .venta__producto .venta__card .venta__info .venta__articulo, .venta__vehiculo .venta__card .venta__info .venta__articulo {
+          font-family: "Saira Stencil One", cursive;
+          color: #0a4407;
+          font-size: 30px; }
+        .venta__producto .venta__card .venta__info .venta__precio, .venta__vehiculo .venta__card .venta__info .venta__precio {
+          font-family: proxima-nova, monospace;
+          color: #0a4407;
+          font-size: 26px; }
+        .venta__producto .venta__card .venta__info .venta__boton, .venta__vehiculo .venta__card .venta__info .venta__boton {
+          background-color: #0a4407;
+          width: min-content;
+          border-radius: 20px; }
+          .venta__producto .venta__card .venta__info .venta__boton img, .venta__vehiculo .venta__card .venta__info .venta__boton img {
+            width: 100px; }
+  .intro__vehiculos {
+    background-color: orange;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    padding: 10px;
+    margin-bottom: 40px;
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 100%, 0 60%); }
+    .intro__vehiculos h2 {
+      text-align: justify;
+      font-family: "Saira Stencil One", cursive;
+      padding: 20px;
+      color: #0a4407;
+      font-size: 2rem; }
+  /*ESPECIFICO SERVICIOS*/
+  .prestaciones {
+    max-width: 100%;
+    padding: 10px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    background-image: linear-gradient(orange, grey, orange); }
+    .prestaciones h2 {
+      margin-top: 40px;
+      font-family: "Saira Stencil One", cursive;
+      color: #0a4407;
+      font-size: 32px;
+      text-align: center; }
+  .main-servicios {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .main-servicios .servicio__card {
+      width: 90%;
+      border: solid 3px #ccd60e;
+      border-radius: 20px;
+      padding: 10px;
+      margin-bottom: 30px;
+      display: grid;
+      grid-template-areas: "img texto" "info texto"; }
+      .main-servicios .servicio__card .servicio__img {
+        grid-area: img;
+        width: 100%;
+        border: solid 3px #ccd60e;
+        border-radius: 20px; }
+      .main-servicios .servicio__card .servicio__img:hover {
+        transform: scale(1.3); }
+      .main-servicios .servicio__card .servicio__info {
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+        .main-servicios .servicio__card .servicio__info .servicio__articulo {
+          font-family: "Saira Stencil One", cursive;
+          color: orange;
+          text-align: center; }
+        .main-servicios .servicio__card .servicio__info .servicio__precio {
+          font-family: proxima-nova, monospace;
+          color: grey;
+          text-align: center; }
+        .main-servicios .servicio__card .servicio__info a {
+          font-family: "Saira Stencil One", cursive;
+          color: orange;
+          text-align: center; }
+      .main-servicios .servicio__card .servicio__texto {
+        grid-area: texto;
+        font-family: proxima-nova, monospace;
+        color: grey;
+        padding: 10px;
+        text-align: center;
+        font-size: 1.7em; }
+  .delivery {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .delivery .delivery__card {
+      width: 90%;
+      height: fit-content;
+      background-color: #0a4407;
+      border: dashed 5px white;
+      border-radius: 20px;
+      margin-right: 10px;
+      padding: 10px;
+      display: grid;
+      grid-template-areas: "img info" "boton boton";
+      justify-content: center;
+      align-items: center; }
+      .delivery .delivery__card .delivery__imgbox {
+        grid-area: img;
+        border-radius: 20px;
+        background-image: radial-gradient(white, orange); }
+        .delivery .delivery__card .delivery__imgbox .delivery__img {
+          width: 100%;
+          height: 150px; }
+      .delivery .delivery__card .delivery__info {
+        grid-area: info;
+        padding: 10px; }
+        .delivery .delivery__card .delivery__info .delivery__nombre {
+          font-family: "Saira Stencil One", cursive;
+          color: orange;
+          text-align: center;
+          text-decoration: underline;
+          text-transform: uppercase; }
+        .delivery .delivery__card .delivery__info .delivery__precio {
+          font-family: proxima-nova, monospace;
+          color: grey; }
+        .delivery .delivery__card .delivery__info .delivery__texto {
+          font-family: proxima-nova, monospace;
+          color: orange; }
+      .delivery .delivery__card .delivery__boton {
+        width: 200px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        color: #0a4407;
+        background-color: orange;
+        border-radius: 15px;
+        box-shadow: 0 5px #ccd60eb8; }
+        .delivery .delivery__card .delivery__boton:hover {
+          background-color: yellow; }
+        .delivery .delivery__card .delivery__boton:active {
+          background-color: grey;
+          box-shadow: 0 2px lightgrey;
+          transform: translateY(4px); } }
