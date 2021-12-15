@@ -12,6 +12,8 @@ $texto2:"Saira Stencil One", cursive;
 $borde: solid 3px $color0;
 $borde2: solid 3px $color1;
 
+//linea 973 comienza @media para pantalla grande
+//linea 1580 comienza @media para pantallas medianas
 
 /*ESTILOS GENERALES*/
 body{
@@ -1220,7 +1222,8 @@ body{
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
+            padding: 10px;
             width: 250px;
             height: 500px;
             .cliente__img{
@@ -1964,10 +1967,11 @@ body{
         justify-content: center;
         .cliente__card{
             width: 90%;
-            height: 180px;
+            height: 200px;
+            padding: 10px;
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
             background-color: $color2;
             border: $borde2;
@@ -1979,6 +1983,7 @@ body{
                 padding: 20px;
             }
             .cliente__info{
+                height: 90%;
                 margin-left: 15px;
                 display: flex;
                 flex-direction: column;
@@ -1988,13 +1993,13 @@ body{
                     font-family: $texto2;
                     color: $color0;
                     text-decoration: underline;
-                    font-size: 20px;
+                    font-size: 18px;
                 }
                 .cliente__prestacion{
                     font-family: $texto;
                     color: $color0;
-                    font-size: 18px;
-                    margin-bottom: 20px;
+                    font-size: 16px;
+                    margin-bottom: 5px;
                 }
                 .cliente__comentario{
                     font-family:$texto;
@@ -2064,10 +2069,6 @@ body{
                 width: 200px;
                 margin-left: 20px;
             }
-            img:hover{
-                transform:rotate(359deg);
-                transition: 1s;
-            }
             .venta__info{
                 width: 150px;
                 height: 100%;
@@ -2092,6 +2093,10 @@ body{
                     border-radius: 20px;                
                     img{
                         width: 100px;
+                    }
+                    img:hover{
+                    transform:rotate(359deg);
+                    transition: 1s;
                     }
                 }
             }
